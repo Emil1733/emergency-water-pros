@@ -105,7 +105,7 @@ export default function ServicesSection() {
                 size="lg" 
                 variant="outline-light"
                 type="button"
-                className="hover:text-water-primary"
+                className="hover:text-white hover:bg-white/20"
                 aria-label="Get free water damage assessment"
               >
                 Get Free Assessment
