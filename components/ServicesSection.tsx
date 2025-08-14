@@ -104,13 +104,17 @@ export default function ServicesSection() {
               <Button 
                 size="lg" 
                 variant="outline-light"
+                type="button"
                 className="hover:text-water-primary"
+                aria-label="Get free water damage assessment"
               >
                 Get Free Assessment
               </Button>
               <Button 
                 size="lg"
                 variant="emergency"
+                href="tel:+18009283791"
+                aria-label="Call Emergency Water Pros hotline"
               >
                 Emergency Hotline
               </Button>

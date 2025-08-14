@@ -51,7 +51,9 @@ export default function HeroSection() {
             <Button 
               size="lg" 
               variant="emergency"
+              href="tel:+15551234357"
               className="px-8 py-6 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
+              aria-label="Call emergency hotline now"
             >
               <Phone className="mr-2" size={20} />
               Call Now: (555) 123-HELP
@@ -59,7 +61,9 @@ export default function HeroSection() {
             <Button 
               variant="outline-light" 
               size="lg"
+              type="button"
               className="hover:text-water-primary px-8 py-6 text-lg rounded-full"
+              aria-label="Get free water damage assessment"
             >
               Get Free Estimate
             </Button>
