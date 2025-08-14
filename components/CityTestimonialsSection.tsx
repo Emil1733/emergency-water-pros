@@ -56,7 +56,7 @@ export default function CityTestimonialsSection({ cityName }: CityTestimonialsSe
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
+    <section className="py-20 bg-gradient-to-b from-water-surface/50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -66,7 +66,7 @@ export default function CityTestimonialsSection({ cityName }: CityTestimonialsSe
           </div>
           
           <h2 className="text-4xl md:text-5xl heading-primary text-gray-900 mb-6">
-            What <span className="text-blue-600">{cityName}</span> Customers Say
+            What <span className="text-water-primary">{cityName}</span> Customers Say
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto body-text">
@@ -83,7 +83,7 @@ export default function CityTestimonialsSection({ cityName }: CityTestimonialsSe
                 <div className="space-y-4">
                   {/* Quote Icon */}
                   <div className="flex justify-between items-start">
-                    <Quote size={24} className="text-blue-200 group-hover:text-blue-400 transition-colors" />
+                    <Quote size={24} className="text-water-primary/30 group-hover:text-water-primary/60 transition-colors" />
                     
                     {/* Star Rating */}
                     <div className="flex items-center gap-1">
@@ -95,7 +95,7 @@ export default function CityTestimonialsSection({ cityName }: CityTestimonialsSe
                   
                   {/* Service Badge */}
                   <div className="inline-block">
-                    <div className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full font-medium">
+                    <div className="bg-water-primary/10 text-water-primary text-xs px-3 py-1 rounded-full font-medium">
                       {testimonial.service}
                     </div>
                   </div>
@@ -107,7 +107,7 @@ export default function CityTestimonialsSection({ cityName }: CityTestimonialsSe
                   
                   {/* Customer Info */}
                   <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                    <Avatar className="w-10 h-10 bg-blue-500">
+                    <Avatar className="w-10 h-10 bg-water-primary">
                       <AvatarFallback className="text-white font-medium">
                         {testimonial.name.split(' ').map(n => n[0]).join('')}
                       </AvatarFallback>
@@ -124,7 +124,7 @@ export default function CityTestimonialsSection({ cityName }: CityTestimonialsSe
         </div>
 
         {/* Review Summary */}
-        <div className="bg-blue-500 rounded-2xl p-8 text-white text-center">
+        <div className="bg-water-primary rounded-2xl p-8 text-white text-center">
           <div className="max-w-2xl mx-auto">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="flex items-center gap-1">
@@ -138,7 +138,7 @@ export default function CityTestimonialsSection({ cityName }: CityTestimonialsSe
               5.0 Star Rating from {cityName} Customers
             </h3>
             
-            <p className="text-blue-100 body-text mb-6">
+            <p className="text-white/80 body-text mb-6">
               Join hundreds of satisfied {cityName} customers who trust Emergency Water Pros for their 
               water damage restoration needs. Experience the difference professional service makes.
             </p>
@@ -146,17 +146,17 @@ export default function CityTestimonialsSection({ cityName }: CityTestimonialsSe
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
                 <div className="text-3xl font-bold mb-1">500+</div>
-                <div className="text-blue-100 text-sm">Properties Restored</div>
+                <div className="text-white/80 text-sm">Properties Restored</div>
               </div>
               
               <div>
                 <div className="text-3xl font-bold mb-1">24/7</div>
-                <div className="text-blue-100 text-sm">Emergency Response</div>
+                <div className="text-white/80 text-sm">Emergency Response</div>
               </div>
               
               <div>
                 <div className="text-3xl font-bold mb-1">100%</div>
-                <div className="text-blue-100 text-sm">Customer Satisfaction</div>
+                <div className="text-white/80 text-sm">Customer Satisfaction</div>
               </div>
             </div>
           </div>
