@@ -135,7 +135,7 @@ export default function CityServicesSection({ services, citySlug }: CityServices
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-blue-500 px-8 py-4 rounded-full"
+                className="border-white bg-white/10 text-white hover:bg-white hover:text-blue-500 px-8 py-4 rounded-full backdrop-blur-sm"
               >
                 Get Free Estimate
               </Button>

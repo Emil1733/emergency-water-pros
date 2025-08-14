@@ -142,7 +142,7 @@ export default function LAServiceAreasSection() {
                 <Phone className="mr-2" size={20} />
                 (323) 555-1234
               </a>
-              <button className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 rounded-full transition-all duration-300 body-text-medium">
+              <button className="px-8 py-4 border-2 border-white bg-white/10 text-white hover:bg-white hover:text-blue-600 rounded-full transition-all duration-300 body-text-medium backdrop-blur-sm">
                 Schedule Assessment
               </button>
             </div>

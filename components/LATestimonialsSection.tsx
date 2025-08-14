@@ -176,7 +176,7 @@ export default function LATestimonialsSection() {
               </button>
               <a 
                 href="tel:3235551234"
-                className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 rounded-full transition-all duration-300 body-text-medium"
+                className="px-8 py-4 border-2 border-white bg-white/10 text-white hover:bg-white hover:text-blue-600 rounded-full transition-all duration-300 body-text-medium backdrop-blur-sm"
               >
                 Call (323) 555-1234
               </a>
