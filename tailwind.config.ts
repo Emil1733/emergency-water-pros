@@ -54,17 +54,17 @@ const config = {
         },
         // Brand water restoration colors
         water: {
-          primary: "var(--water-primary)",
-          secondary: "var(--water-secondary)",
-          accent: "var(--water-accent)",
-          surface: "var(--water-surface)",
-          text: "var(--water-text)",
+          primary: "#1159a0",
+          secondary: "#007fff", 
+          accent: "#f97a1f",
+          surface: "#f0f2f4",
+          text: "#262626",
         },
         // Emergency/urgent colors
         emergency: {
-          DEFAULT: "var(--emergency)",
-          foreground: "var(--emergency-foreground)",
-          hover: "var(--emergency-hover)",
+          DEFAULT: "#ef4444",
+          foreground: "#ffffff",
+          hover: "#dc2626",
         },
         // Success colors
         success: {
