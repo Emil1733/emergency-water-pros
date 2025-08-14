@@ -103,8 +103,8 @@ export default function ServicesSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                variant="outline"
-                className="border-white bg-white/10 text-white hover:bg-white hover:text-water-primary backdrop-blur-sm"
+                variant="outline-light"
+                className="hover:text-water-primary"
               >
                 Get Free Assessment
               </Button>
