@@ -17,25 +17,25 @@ export default function LAHeroSection() {
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/85 to-yellow-600/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-water-primary/85 to-water-accent/40"></div>
       </div>
 
       {/* Floating Elements with LA Theme */}
-      <div className="absolute top-20 left-10 w-4 h-4 bg-yellow-400/30 rounded-full animate-float"></div>
-      <div className="absolute top-40 right-20 w-6 h-6 bg-blue-400/20 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute bottom-32 left-1/4 w-3 h-3 bg-yellow-300/40 rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
+      <div className="absolute top-20 left-10 w-4 h-4 bg-water-accent/30 rounded-full animate-float"></div>
+      <div className="absolute top-40 right-20 w-6 h-6 bg-water-secondary/20 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-32 left-1/4 w-3 h-3 bg-water-accent/40 rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
 
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
           {/* Location Badge */}
-          <div className="inline-flex items-center gap-2 bg-yellow-500 text-black px-6 py-3 rounded-full text-sm font-medium">
+          <div className="inline-flex items-center gap-2 bg-water-accent text-white px-6 py-3 rounded-full text-sm font-medium">
             <MapPin size={16} />
             <span>Serving Los Angeles & Surrounding Areas</span>
           </div>
 
           {/* Emergency Banner */}
-          <div className="inline-flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-full text-sm font-medium animate-pulse">
+          <div className="inline-flex items-center gap-2 bg-emergency text-emergency-foreground px-6 py-3 rounded-full text-sm font-medium animate-pulse">
             <Phone size={16} />
             <span>24/7 Emergency Response in LA</span>
           </div>
@@ -43,12 +43,12 @@ export default function LAHeroSection() {
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl text-white mb-6">
             <span className="block heading-primary">Water Damage</span>
-            <span className="block heading-primary text-yellow-200 mt-2">Los Angeles?</span>
-            <span className="block heading-primary text-blue-200 mt-2">We Restore.</span>
+            <span className="block heading-primary text-white/90 mt-2">Los Angeles?</span>
+            <span className="block heading-primary text-white/80 mt-2">We Restore.</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto body-text">
+          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto body-text">
             Premier water damage restoration services across Los Angeles County. 
             From Hollywood to Santa Monica, we restore your property to perfection.
           </p>
@@ -57,7 +57,7 @@ export default function LAHeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
             <Button 
               size="lg" 
-              className="bg-red-500 hover:bg-red-600 text-white px-8 py-6 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
+              className="bg-emergency hover:bg-emergency-hover text-emergency-foreground px-8 py-6 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
               <Phone className="mr-2" size={20} />
               Call LA Emergency: (323) 555-HELP
@@ -65,7 +65,7 @@ export default function LAHeroSection() {
             <Button 
               variant="outline-light" 
               size="lg"
-              className="hover:text-blue-900 px-8 py-6 text-lg rounded-full"
+              className="hover:text-water-primary px-8 py-6 text-lg rounded-full"
             >
               Free LA Assessment
             </Button>
