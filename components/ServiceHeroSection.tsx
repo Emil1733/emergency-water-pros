@@ -99,9 +99,9 @@ export default function ServiceHeroSection({ serviceData }: ServiceHeroSectionPr
               <a href="tel:+1-800-WATER-911">Emergency: (800) WATER-911</a>
             </Button>
             <Button 
-              variant="outline" 
+              variant="outline-light" 
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-water-primary px-8 py-6 text-lg rounded-full backdrop-blur-sm bg-white/10"
+              className="hover:text-water-primary px-8 py-6 text-lg rounded-full"
             >
               Free {serviceData.city} Estimate
             </Button>

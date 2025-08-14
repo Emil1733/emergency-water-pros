@@ -67,9 +67,9 @@ export default function CityHeroSection({ cityData }: CityHeroSectionProps) {
               <a href="tel:+1-800-WATER-911">Call Emergency: (800) WATER-911</a>
             </Button>
             <Button 
-              variant="outline" 
+              variant="outline-light" 
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-6 text-lg rounded-full backdrop-blur-sm bg-white/10"
+              className="hover:text-blue-900 px-8 py-6 text-lg rounded-full"
             >
               Free {cityData.city} Assessment
             </Button>

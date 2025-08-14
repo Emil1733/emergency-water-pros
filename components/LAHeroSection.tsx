@@ -63,9 +63,9 @@ export default function LAHeroSection() {
               Call LA Emergency: (323) 555-HELP
             </Button>
             <Button 
-              variant="outline" 
+              variant="outline-light" 
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-6 text-lg rounded-full backdrop-blur-sm bg-white/10"
+              className="hover:text-blue-900 px-8 py-6 text-lg rounded-full"
             >
               Free LA Assessment
             </Button>

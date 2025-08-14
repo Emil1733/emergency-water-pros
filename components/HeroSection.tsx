@@ -57,9 +57,9 @@ export default function HeroSection() {
               Call Now: (555) 123-HELP
             </Button>
             <Button 
-              variant="outline" 
+              variant="outline-light" 
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-water-primary px-8 py-6 text-lg rounded-full backdrop-blur-sm bg-white/10"
+              className="hover:text-water-primary px-8 py-6 text-lg rounded-full"
             >
               Get Free Estimate
             </Button>
