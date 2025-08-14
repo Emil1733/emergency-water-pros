@@ -63,7 +63,7 @@ export default function TrustSection() {
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="text-3xl md:text-4xl heading-primary text-blue-600 mb-2">
+                <div className="text-3xl md:text-4xl heading-primary text-water-primary mb-2">
                   {stat.number}
                 </div>
                 <div className="text-gray-600 body-text-medium">
@@ -84,7 +84,7 @@ export default function TrustSection() {
               <Badge 
                 key={cert.name}
                 variant="outline"
-                className="px-6 py-3 text-lg border-blue-200 text-blue-700 hover:bg-blue-50 transition-colors duration-300"
+                className="px-6 py-3 text-lg border-water-primary/30 text-water-primary hover:bg-water-primary/10 transition-colors duration-300"
               >
                 <cert.icon size={20} className="mr-2" />
                 {cert.name}

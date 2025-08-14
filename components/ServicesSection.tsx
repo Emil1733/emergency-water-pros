@@ -10,28 +10,28 @@ const services = [
     title: "Water Damage Restoration",
     description: "Complete water extraction, drying, and restoration services for floods, leaks, and burst pipes.",
     features: ["24/7 Emergency Response", "Advanced Drying Equipment", "Moisture Detection", "Structural Repairs"],
-    color: "text-blue-500"
+    color: "text-water-primary"
   },
   {
     icon: Flame,
     title: "Fire Damage Restoration",
     description: "Comprehensive fire and smoke damage cleanup, odor removal, and complete property restoration.",
     features: ["Smoke Odor Removal", "Soot Cleanup", "Content Restoration", "Structural Rebuilding"],
-    color: "text-red-500"
+    color: "text-emergency"
   },
   {
     icon: Zap,
     title: "Mold Remediation",
     description: "Professional mold inspection, removal, and prevention to ensure a healthy living environment.",
     features: ["Mold Testing", "Safe Removal", "Air Purification", "Prevention Solutions"],
-    color: "text-green-500"
+    color: "text-chart-4"
   },
   {
     icon: Home,
     title: "Emergency Services",
     description: "Immediate response for urgent situations requiring immediate attention and stabilization.",
     features: ["Board-Up Services", "Tarping", "Water Extraction", "Emergency Repairs"],
-    color: "text-orange-500"
+    color: "text-water-accent"
   }
 ]
 

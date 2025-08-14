@@ -37,11 +37,11 @@ export default function HeroSection() {
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl text-white mb-6">
             <span className="block heading-primary">Water Damage?</span>
-            <span className="block heading-primary text-water-secondary/80 mt-2">We Restore.</span>
+            <span className="block heading-primary text-white mt-2">We Restore.</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-water-secondary/60 max-w-3xl mx-auto body-text">
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto body-text">
             Professional water damage restoration, mold remediation, and emergency response. 
             Your property restored to perfection, faster than you thought possible.
           </p>

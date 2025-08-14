@@ -78,7 +78,7 @@ export default function ContactSection({ cityData, serviceType }: ContactSection
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
           <div className="text-center">
             <div className="w-12 h-12 bg-water-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Phone size={24} />
+              <Phone size={24} className="text-white" />
             </div>
             <h3 className="text-lg heading-secondary mb-2">Call Us</h3>
             <p className="text-gray-300 body-text">
@@ -90,7 +90,7 @@ export default function ContactSection({ cityData, serviceType }: ContactSection
           
           <div className="text-center">
             <div className="w-12 h-12 bg-water-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Mail size={24} />
+              <Mail size={24} className="text-white" />
             </div>
             <h3 className="text-lg heading-secondary mb-2">Email Us</h3>
             <p className="text-gray-300 body-text">help@emergencywaterpros.com</p>
@@ -98,7 +98,7 @@ export default function ContactSection({ cityData, serviceType }: ContactSection
           
           <div className="text-center">
             <div className="w-12 h-12 bg-water-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-              <MessageCircle size={24} />
+              <MessageCircle size={24} className="text-white" />
             </div>
             <h3 className="text-lg heading-secondary mb-2">Live Chat</h3>
             <p className="text-gray-300 body-text">Available 24/7</p>
@@ -106,7 +106,7 @@ export default function ContactSection({ cityData, serviceType }: ContactSection
           
           <div className="text-center">
             <div className="w-12 h-12 bg-water-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Clock size={24} />
+              <Clock size={24} className="text-white" />
             </div>
             <h3 className="text-lg heading-secondary mb-2">Response Time</h3>
             <p className="text-gray-300 body-text">45 minutes avg</p>

@@ -8,7 +8,7 @@ const buttonVariants = {
     emergency: "bg-emergency text-emergency-foreground shadow hover:bg-emergency-hover",
     destructive: "bg-emergency text-emergency-foreground shadow-sm hover:bg-emergency-hover",
     outline: "border border-gray-300 bg-white shadow-sm hover:bg-gray-50 hover:text-gray-900",
-    "outline-light": "border border-white bg-white/10 text-white shadow-sm hover:bg-white hover:text-gray-900 backdrop-blur-sm",
+    "outline-light": "border border-white bg-white/10 text-white shadow-sm hover:bg-white hover:text-water-primary backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:scale-105",
     secondary: "bg-gray-100 text-gray-900 shadow-sm hover:bg-gray-200",
     ghost: "hover:bg-gray-100 hover:text-gray-900",
     link: "text-water-primary underline-offset-4 hover:underline",

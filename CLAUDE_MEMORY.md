@@ -91,7 +91,6 @@ User has consistently reported the same button visibility issue at https://www.e
 4. **Test lead capture form functionality**
 
 ## Important Notes
-- User wants to use Stagewise (AI frontend coding tool) - confirmed it will work with our setup
 - Always test button visibility at `/water-restoration/` page specifically
 - User expects proactive pushing to GitHub without asking
 - Focus on practical fixes over explanations
