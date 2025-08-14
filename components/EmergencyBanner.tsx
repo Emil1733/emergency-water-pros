@@ -21,7 +21,7 @@ export default function EmergencyBanner() {
           <Button 
             size="sm" 
             variant="outline"
-            className="border-white text-white hover:bg-white hover:text-emergency transition-colors"
+            className="border-white bg-white/10 text-white hover:bg-white hover:text-emergency transition-colors backdrop-blur-sm"
           >
             <Phone size={16} className="mr-2" />
             (555) 123-HELP
