@@ -9,17 +9,17 @@ import LATestimonialsSection from "@/components/LATestimonialsSection"
 import ContactSection from "@/components/ContactSection"
 
 export const metadata: Metadata = {
-  title: 'Water Damage Restoration Los Angeles | Emergency Response 24/7 | AquaRestore Pro',
+  title: 'Water Damage Restoration Los Angeles | Emergency Response 24/7 | Emergency Water Pros',
   description: 'Professional water damage restoration services in Los Angeles. 24/7 emergency response across Hollywood, Beverly Hills, Santa Monica, Downtown LA. Licensed, insured, and IICRC certified.',
   keywords: 'water damage restoration Los Angeles, emergency water damage LA, flood cleanup Hollywood, Beverly Hills water damage, Santa Monica restoration, Downtown LA water damage, California water damage contractor',
   openGraph: {
-    title: 'Water Damage Restoration Los Angeles | AquaRestore Pro',
+    title: 'Water Damage Restoration Los Angeles | Emergency Water Pros',
     description: 'Expert water damage restoration across all Los Angeles neighborhoods. 20-minute emergency response, licensed & insured.',
     type: 'website',
     locale: 'en_US',
   },
   alternates: {
-    canonical: 'https://aquarestorepro.com/los-angeles'
+    canonical: 'https://emergencywaterpros.com/los-angeles'
   }
 }
 
@@ -33,9 +33,9 @@ export default function LosAngelesWaterRestorationPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "AquaRestore Pro Los Angeles",
+            "name": "Emergency Water Pros Los Angeles",
             "description": "Professional water damage restoration services in Los Angeles",
-            "url": "https://aquarestorepro.com/los-angeles",
+            "url": "https://emergencywaterpros.com/los-angeles",
             "telephone": "+1-323-555-1234",
             "address": {
               "@type": "PostalAddress",
@@ -119,7 +119,7 @@ export default function LosAngelesWaterRestorationPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
-              <h3 className="text-2xl heading-secondary mb-4">AquaRestore Pro Los Angeles</h3>
+              <h3 className="text-2xl heading-secondary mb-4">Emergency Water Pros Los Angeles</h3>
               <p className="text-gray-300 body-text mb-4 max-w-md">
                 Los Angeles' premier water damage restoration company. Serving all LA neighborhoods 
                 with 24/7 emergency response and expert restoration services.
@@ -148,7 +148,7 @@ export default function LosAngelesWaterRestorationPage() {
               <ul className="space-y-2 text-gray-300 body-text">
                 <li>Emergency: (323) 555-HELP</li>
                 <li>Office: (323) 555-1234</li>
-                <li>la@aquarestorepro.com</li>
+                <li>la@emergencywaterpros.com</li>
                 <li>123 Main St, LA 90210</li>
                 <li>Available 24/7</li>
               </ul>
@@ -156,7 +156,7 @@ export default function LosAngelesWaterRestorationPage() {
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 body-text">
-            <p>&copy; 2024 AquaRestore Pro Los Angeles. All rights reserved. CA License #123456 | Licensed, Bonded & Insured in California</p>
+            <p>&copy; 2024 Emergency Water Pros Los Angeles. All rights reserved. CA License #123456 | Licensed, Bonded & Insured in California</p>
           </div>
         </div>
       </footer>

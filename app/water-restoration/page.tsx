@@ -178,7 +178,7 @@ export default function WaterRestorationPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
-              <h3 className="text-2xl heading-secondary mb-4">AquaRestore Pro</h3>
+              <h3 className="text-2xl heading-secondary mb-4">Emergency Water Pros</h3>
               <p className="text-gray-300 body-text mb-4 max-w-md">
                 Professional water damage restoration, mold remediation, and emergency response services. 
                 Your trusted partner in property restoration.
@@ -206,14 +206,14 @@ export default function WaterRestorationPage() {
               <ul className="space-y-2 text-gray-300 body-text">
                 <li>Emergency: (555) 123-HELP</li>
                 <li>Office: (555) 123-4567</li>
-                <li>help@aquarestore.com</li>
+                <li>help@emergencywaterpros.com</li>
                 <li>Available 24/7</li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 body-text">
-            <p>&copy; 2024 AquaRestore Pro. All rights reserved. Licensed, Bonded & Insured.</p>
+            <p>&copy; 2024 Emergency Water Pros. All rights reserved. Licensed, Bonded & Insured.</p>
           </div>
         </div>
       </footer>

@@ -10,7 +10,7 @@ const laTestimonials = [
     name: "Jennifer Martinez",
     role: "Beverly Hills Homeowner",
     neighborhood: "Beverly Hills",
-    content: "When our master bathroom flooded at 2 AM, AquaRestore Pro was at our door within 20 minutes. They understood the value of our custom finishes and saved everything. Truly the best in LA.",
+    content: "When our master bathroom flooded at 2 AM, Emergency Water Pros was at our door within 20 minutes. They understood the value of our custom finishes and saved everything. Truly the best in LA.",
     rating: 5,
     avatar: "https://i.pravatar.cc/150?img=4",
     projectType: "Luxury Home Restoration"
@@ -37,7 +37,7 @@ const laTestimonials = [
     name: "Robert Chen",
     role: "Pasadena Property Manager",
     neighborhood: "Pasadena",
-    content: "Managing 12 properties across LA, I've worked with many contractors. AquaRestore Pro is the only one I trust for emergency situations. Fast, reliable, and honest.",
+    content: "Managing 12 properties across LA, I've worked with many contractors. Emergency Water Pros is the only one I trust for emergency situations. Fast, reliable, and honest.",
     rating: 5,
     avatar: "https://i.pravatar.cc/150?img=7",
     projectType: "Multi-Property Management"

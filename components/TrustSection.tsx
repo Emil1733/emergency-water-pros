@@ -16,7 +16,7 @@ const testimonials = [
   {
     name: "Sarah Johnson",
     role: "Homeowner",
-    content: "AquaRestore Pro saved our home after a major flood. Their team was professional, fast, and incredibly thorough. They made a devastating situation manageable.",
+    content: "Emergency Water Pros saved our home after a major flood. Their team was professional, fast, and incredibly thorough. They made a devastating situation manageable.",
     rating: 5,
     avatar: "https://i.pravatar.cc/150?img=1"
   },
@@ -30,7 +30,7 @@ const testimonials = [
   {
     name: "Lisa Rodriguez",
     role: "Property Manager",
-    content: "We've used AquaRestore Pro for multiple properties. Their consistency, quality, and reliability make them our go-to restoration company.",
+    content: "We've used Emergency Water Pros for multiple properties. Their consistency, quality, and reliability make them our go-to restoration company.",
     rating: 5,
     avatar: "https://i.pravatar.cc/150?img=3"
   }
