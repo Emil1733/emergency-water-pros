@@ -94,7 +94,7 @@ export default function ServicesSection() {
         {/* CTA Section */}
         <div className="text-center">
           <div className="inline-block p-8 rounded-3xl water-gradient text-white shadow-2xl">
-            <h3 className="text-2xl heading-secondary mb-4">
+            <h3 className="text-2xl heading-secondary mb-4 text-black">
               Need Immediate Assistance?
             </h3>
             <p className="body-text mb-6 opacity-90">
@@ -103,9 +103,9 @@ export default function ServicesSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                variant="outline-light"
+                variant="outline"
                 type="button"
-                className="hover:text-white hover:bg-white/20"
+                className="bg-white text-black border-black hover:bg-black hover:text-white"
                 aria-label="Get free water damage assessment"
               >
                 Get Free Assessment
