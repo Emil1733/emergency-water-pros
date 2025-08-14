@@ -104,7 +104,7 @@ export default function ServicesSection() {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-water-primary"
+                className="border-white bg-white/10 text-white hover:bg-white hover:text-water-primary backdrop-blur-sm"
               >
                 Get Free Assessment
               </Button>

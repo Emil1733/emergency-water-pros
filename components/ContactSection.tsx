@@ -55,7 +55,7 @@ export default function ContactSection({ cityData, serviceType }: ContactSection
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="w-full border-white text-white hover:bg-white hover:text-emergency"
+                  className="w-full border-white bg-white/10 text-white hover:bg-white hover:text-emergency backdrop-blur-sm"
                   onClick={() => window.location.href = 'tel:+1-800-WATER-911'}
                 >
                   <Phone className="mr-2" size={20} />
