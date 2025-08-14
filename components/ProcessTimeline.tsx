@@ -124,7 +124,7 @@ export default function ProcessTimeline() {
               Contact us today for a free assessment and detailed restoration plan
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button className="px-6 py-3 water-gradient text-white rounded-lg hover:shadow-lg transition-all duration-300 body-text-medium">
+              <button className="px-6 py-3 bg-white text-black border border-black rounded-lg hover:bg-black hover:text-white transition-all duration-300 body-text-medium">
                 Schedule Assessment
               </button>
               <button className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-all duration-300 body-text-medium">
