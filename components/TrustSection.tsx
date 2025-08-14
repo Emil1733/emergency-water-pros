@@ -152,7 +152,7 @@ export default function TrustSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="relative group">
               <div className="absolute top-4 left-4 z-10">
-                <Badge className="bg-red-500 text-white">Before</Badge>
+                <Badge className="bg-emergency text-emergency-foreground">Before</Badge>
               </div>
               <img
                 src="https://images.unsplash.com/photo-1446712146541-843e336d8154?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHwzfHx3YXRlciUyMGRhbWFnZSUyMGZsb29kZWQlMjByb29tJTIwZGFtYWdlZCUyMGludGVyaW9yfGVufDB8MHx8fDE3NTQ5OTk4NjN8MA&ixlib=rb-4.1.0&q=85"
@@ -163,7 +163,7 @@ export default function TrustSection() {
             </div>
             <div className="relative group">
               <div className="absolute top-4 left-4 z-10">
-                <Badge className="bg-green-500 text-white">After</Badge>
+                <Badge className="bg-chart-4 text-white">After</Badge>
               </div>
               <img
                 src="https://images.unsplash.com/photo-1648475237029-7f853809ca14?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHw5fHxjbGVhbiUyMHJvb20lMjBtb2Rlcm4lMjBpbnRlcmlvciUyMHJlc3RvcmVkJTIwaG9tZXxlbnwwfDB8fHwxNzU0OTk5ODYzfDA&ixlib=rb-4.1.0&q=85"

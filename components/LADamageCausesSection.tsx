@@ -120,7 +120,7 @@ export default function LADamageCausesSection() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-chart-4 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Droplets size={32} className="text-white" />
               </div>
               <h3 className="text-lg heading-secondary text-gray-900 mb-2">Climate Adaptation</h3>

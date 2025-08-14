@@ -60,13 +60,13 @@ export default function ServiceProcessSection({ serviceData }: ServiceProcessSec
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 bg-water-primary/10 text-water-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Clock size={16} />
             <span>Our Proven Process</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl heading-primary text-gray-900 mb-6">
-            How We Handle <span className="text-blue-600">{serviceData.service}</span>
+            How We Handle <span className="text-water-primary">{serviceData.service}</span>
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto body-text">
@@ -84,7 +84,7 @@ export default function ServiceProcessSection({ serviceData }: ServiceProcessSec
                   <div className="flex items-start gap-6">
                     {/* Step Number */}
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-lg group-hover:bg-blue-600 transition-colors">
+                      <div className="w-12 h-12 bg-water-primary text-white rounded-full flex items-center justify-center font-bold text-lg group-hover:bg-water-secondary transition-colors">
                         {step.step}
                       </div>
                     </div>
@@ -92,11 +92,11 @@ export default function ServiceProcessSection({ serviceData }: ServiceProcessSec
                     {/* Step Content */}
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-3">
-                        <IconComponent size={20} className="text-blue-500 group-hover:text-blue-600 transition-colors" />
-                        <h3 className="text-xl heading-secondary text-gray-900 group-hover:text-blue-600 transition-colors">
+                        <IconComponent size={20} className="text-water-primary group-hover:text-water-secondary transition-colors" />
+                        <h3 className="text-xl heading-secondary text-gray-900 group-hover:text-water-primary transition-colors">
                           {step.title}
                         </h3>
-                        <div className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full font-medium">
+                        <div className="bg-water-primary/10 text-water-primary text-xs px-3 py-1 rounded-full font-medium">
                           {step.duration}
                         </div>
                       </div>
@@ -113,7 +113,7 @@ export default function ServiceProcessSection({ serviceData }: ServiceProcessSec
         </div>
 
         {/* Why Choose Us Section */}
-        <div className="bg-blue-500 rounded-2xl p-8 text-white mb-16">
+        <div className="bg-water-primary rounded-2xl p-8 text-white mb-16">
           <div className="text-center max-w-3xl mx-auto">
             <h3 className="text-3xl heading-secondary mb-6">
               Why {serviceData.city} Chooses Emergency Water Pros
@@ -123,31 +123,31 @@ export default function ServiceProcessSection({ serviceData }: ServiceProcessSec
               <div className="text-center">
                 <div className="text-4xl mb-2">⚡</div>
                 <div className="text-lg font-semibold mb-1">Lightning Fast</div>
-                <div className="text-blue-100 text-sm">45-minute response time guaranteed</div>
+                <div className="text-white/80 text-sm">45-minute response time guaranteed</div>
               </div>
               
               <div className="text-center">
                 <div className="text-4xl mb-2">🏆</div>
                 <div className="text-lg font-semibold mb-1">Certified Experts</div>
-                <div className="text-blue-100 text-sm">IICRC certified restoration specialists</div>
+                <div className="text-white/80 text-sm">IICRC certified restoration specialists</div>
               </div>
               
               <div className="text-center">
                 <div className="text-4xl mb-2">💰</div>
                 <div className="text-lg font-semibold mb-1">Insurance Direct</div>
-                <div className="text-blue-100 text-sm">We handle all insurance paperwork</div>
+                <div className="text-white/80 text-sm">We handle all insurance paperwork</div>
               </div>
             </div>
 
-            <div className="bg-blue-600/50 rounded-lg p-6 mb-6">
-              <p className="text-blue-100 body-text italic">
+            <div className="bg-water-secondary/50 rounded-lg p-6 mb-6">
+              <p className="text-white/80 body-text italic">
                 "{serviceData.why_choose_us}"
               </p>
             </div>
             
             <Button 
               size="lg" 
-              className="bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-full shadow-lg"
+              className="bg-emergency hover:bg-emergency-hover text-emergency-foreground px-8 py-4 rounded-full shadow-lg"
             >
               <Phone className="mr-2" size={20} />
               <a href="tel:+1-800-WATER-911">Get Started: (800) WATER-911</a>

@@ -9,7 +9,7 @@ const neighborhoods = [
     name: "Hollywood",
     responseTime: "15 min",
     specialties: ["Historic Properties", "Entertainment Industry", "High-Rise Buildings"],
-    color: "bg-red-500"
+    color: "bg-emergency"
   },
   {
     name: "Beverly Hills",
@@ -33,7 +33,7 @@ const neighborhoods = [
     name: "Pasadena",
     responseTime: "25 min",
     specialties: ["Historic Homes", "Craftsman Style", "Rose Bowl Area"],
-    color: "bg-green-500"
+    color: "bg-chart-4"
   },
   {
     name: "West Hollywood",
@@ -137,7 +137,7 @@ export default function LAServiceAreasSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:3235551234"
-                className="inline-flex items-center justify-center px-8 py-4 bg-red-500 hover:bg-red-600 text-white rounded-full transition-colors duration-300 body-text-medium"
+                className="inline-flex items-center justify-center px-8 py-4 bg-emergency hover:bg-emergency-hover text-emergency-foreground rounded-full transition-colors duration-300 body-text-medium"
               >
                 <Phone className="mr-2" size={20} />
                 (323) 555-1234

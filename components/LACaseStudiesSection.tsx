@@ -77,7 +77,7 @@ export default function LACaseStudiesSection() {
                           className="w-full h-full object-cover"
                         />
                         <div className="absolute top-4 left-4">
-                          <Badge className="bg-red-500 text-white">Before</Badge>
+                          <Badge className="bg-emergency text-emergency-foreground">Before</Badge>
                         </div>
                       </div>
                       <div className="relative">
@@ -89,7 +89,7 @@ export default function LACaseStudiesSection() {
                           className="w-full h-full object-cover"
                         />
                         <div className="absolute top-4 left-4">
-                          <Badge className="bg-green-500 text-white">After</Badge>
+                          <Badge className="bg-chart-4 text-white">After</Badge>
                         </div>
                       </div>
                     </div>

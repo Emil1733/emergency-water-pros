@@ -93,13 +93,13 @@ export default function ServiceTestimonialsSection({ serviceData }: ServiceTesti
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 bg-chart-4/10 text-chart-4 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <CheckCircle size={16} />
             <span>Success Stories</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl heading-primary text-gray-900 mb-6">
-            <span className="text-green-600">{serviceData.service}</span> Success Stories
+            <span className="text-chart-4">{serviceData.service}</span> Success Stories
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto body-text">
@@ -130,7 +130,7 @@ export default function ServiceTestimonialsSection({ serviceData }: ServiceTesti
                   
                   {/* Quote Icon */}
                   <div className="text-center">
-                    <Quote size={32} className="text-blue-200 mx-auto group-hover:text-blue-400 transition-colors" />
+                    <Quote size={32} className="text-water-primary/30 mx-auto group-hover:text-water-primary/60 transition-colors" />
                   </div>
                   
                   {/* Testimonial Text */}
@@ -140,7 +140,7 @@ export default function ServiceTestimonialsSection({ serviceData }: ServiceTesti
                   
                   {/* Customer Info */}
                   <div className="flex items-center justify-center gap-3 pt-4 border-t border-gray-100">
-                    <Avatar className="w-12 h-12 bg-blue-500">
+                    <Avatar className="w-12 h-12 bg-water-primary">
                       <AvatarFallback className="text-white font-medium">
                         {testimonial.name.split(' ').map(n => n[0]).join('')}
                       </AvatarFallback>
@@ -160,13 +160,13 @@ export default function ServiceTestimonialsSection({ serviceData }: ServiceTesti
         <div className="bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl p-8 text-white text-center">
           <div className="max-w-3xl mx-auto">
             <div className="flex items-center justify-center gap-2 mb-6">
-              <CheckCircle size={32} className="text-green-200" />
+              <CheckCircle size={32} className="text-chart-4/60" />
               <h3 className="text-3xl heading-secondary">
                 Our {serviceData.service} Guarantee
               </h3>
             </div>
             
-            <p className="text-blue-100 body-text mb-8 text-lg">
+            <p className="text-white/80 body-text mb-8 text-lg">
               Every {serviceData.service.toLowerCase()} project in {serviceData.city} comes with our satisfaction guarantee. 
               We're not happy unless you're completely satisfied with our work.
             </p>
@@ -175,25 +175,25 @@ export default function ServiceTestimonialsSection({ serviceData }: ServiceTesti
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                 <div className="text-3xl mb-2">✅</div>
                 <div className="text-lg font-semibold mb-1">Quality Work</div>
-                <div className="text-blue-100 text-sm">IICRC certified professionals</div>
+                <div className="text-white/80 text-sm">IICRC certified professionals</div>
               </div>
               
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                 <div className="text-3xl mb-2">⚡</div>
                 <div className="text-lg font-semibold mb-1">Fast Response</div>
-                <div className="text-blue-100 text-sm">45-minute arrival guaranteed</div>
+                <div className="text-white/80 text-sm">45-minute arrival guaranteed</div>
               </div>
               
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                 <div className="text-3xl mb-2">💯</div>
                 <div className="text-lg font-semibold mb-1">100% Satisfaction</div>
-                <div className="text-blue-100 text-sm">We guarantee your happiness</div>
+                <div className="text-white/80 text-sm">We guarantee your happiness</div>
               </div>
             </div>
             
             <div className="mt-8">
               <div className="text-lg font-medium mb-2">Ready to join our satisfied customers?</div>
-              <div className="text-blue-100">Call now for your free {serviceData.city} assessment</div>
+              <div className="text-white/80">Call now for your free {serviceData.city} assessment</div>
             </div>
           </div>
         </div>
