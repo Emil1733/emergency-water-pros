@@ -86,6 +86,9 @@
   --water-accent: #f97a1f;
   --water-surface: #f0f2f4;
   --water-text: #262626;
+  --emergency: #ef4444;
+  --emergency-foreground: #ffffff;
+  --emergency-hover: #dc2626;
   --la-gold: #FFD700;
   --california-blue: #0066CC;
 }
@@ -114,6 +117,9 @@
   --water-accent: #f97a1f;
   --water-surface: #334155;
   --water-text: #f8fafc;
+  --emergency: #ef4444;
+  --emergency-foreground: #ffffff;
+  --emergency-hover: #dc2626;
   --la-gold: #FFC107;
   --california-blue: #1976D2;
 }

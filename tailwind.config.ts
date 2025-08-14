@@ -62,9 +62,9 @@ const config = {
         },
         // Emergency/urgent colors
         emergency: {
-          DEFAULT: "#ef4444", // red-500
-          foreground: "#ffffff",
-          hover: "#dc2626", // red-600
+          DEFAULT: "var(--emergency)",
+          foreground: "var(--emergency-foreground)",
+          hover: "var(--emergency-hover)",
         },
         // Success colors
         success: {

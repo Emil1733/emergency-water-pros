@@ -45,7 +45,6 @@ const nextConfig = {
   experimental: {
     // Limit parallel static generation
     workerThreads: false,
-    cpus: 1
   },
 }
 
