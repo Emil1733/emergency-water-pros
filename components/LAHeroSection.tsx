@@ -1,0 +1,104 @@
+'use client'
+
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { Phone, Clock, Shield, MapPin } from "lucide-react"
+
+export default function LAHeroSection() {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="https://images.unsplash.com/photo-1513711487224-63b774e12f4d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHw0fHxMb3MlMjBBbmdlbGVzJTIwc2t5bGluZSUyMGRvd250b3duJTIwTEElMjBjaXR5JTIwYnVpbGRpbmdzfGVufDB8MHx8Ymx1ZXwxNzU1MDcyMjg2fDA&ixlib=rb-4.1.0&q=85"
+          alt="Los Angeles skyline cityscape"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/85 to-yellow-600/40"></div>
+      </div>
+
+      {/* Floating Elements with LA Theme */}
+      <div className="absolute top-20 left-10 w-4 h-4 bg-yellow-400/30 rounded-full animate-float"></div>
+      <div className="absolute top-40 right-20 w-6 h-6 bg-blue-400/20 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-32 left-1/4 w-3 h-3 bg-yellow-300/40 rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
+
+      {/* Main Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="space-y-8">
+          {/* Location Badge */}
+          <div className="inline-flex items-center gap-2 bg-yellow-500 text-black px-6 py-3 rounded-full text-sm font-medium">
+            <MapPin size={16} />
+            <span>Serving Los Angeles & Surrounding Areas</span>
+          </div>
+
+          {/* Emergency Banner */}
+          <div className="inline-flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-full text-sm font-medium animate-pulse">
+            <Phone size={16} />
+            <span>24/7 Emergency Response in LA</span>
+          </div>
+
+          {/* Main Heading */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl text-white mb-6">
+            <span className="block heading-primary">Water Damage</span>
+            <span className="block heading-primary text-yellow-200 mt-2">Los Angeles?</span>
+            <span className="block heading-primary text-blue-200 mt-2">We Restore.</span>
+          </h1>
+
+          {/* Subheading */}
+          <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto body-text">
+            Premier water damage restoration services across Los Angeles County. 
+            From Hollywood to Santa Monica, we restore your property to perfection.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
+            <Button 
+              size="lg" 
+              className="bg-red-500 hover:bg-red-600 text-white px-8 py-6 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
+            >
+              <Phone className="mr-2" size={20} />
+              Call LA Emergency: (323) 555-HELP
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-6 text-lg rounded-full backdrop-blur-sm bg-white/10"
+            >
+              Free LA Assessment
+            </Button>
+          </div>
+
+          {/* Trust Indicators */}
+          <div className="flex flex-wrap justify-center items-center gap-8 mt-16 text-white/80">
+            <div className="flex items-center gap-2">
+              <Clock size={20} />
+              <span className="body-text-medium">20-Min Response in LA</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Shield size={20} />
+              <span className="body-text-medium">CA Licensed & Insured</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <MapPin size={20} />
+              <span className="body-text-medium">All LA Neighborhoods</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">⭐</span>
+              <span className="body-text-medium">5,000+ LA Properties Restored</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+        </div>
+      </div>
+    </section>
+  )
+}

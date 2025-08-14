@@ -1,0 +1,282 @@
+import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import { getServiceBySlug, getCitiesData, loadServiceData } from '@/lib/serviceData'
+import EmergencyBanner from "@/components/EmergencyBanner"
+import ServiceHeroSection from "@/components/ServiceHeroSection"
+import ServiceProcessSection from "@/components/ServiceProcessSection"
+import ServiceTestimonialsSection from "@/components/ServiceTestimonialsSection"
+import ServiceComplianceSection from "@/components/ServiceComplianceSection"
+import ContactSection from "@/components/ContactSection"
+
+interface ServicePageProps {
+  params: {
+    city: string
+    service: string
+  }
+}
+
+// SOLUTION: Force dynamic rendering to avoid Jest worker issues
+export const dynamicParams = true
+export const dynamic = 'force-dynamic'
+
+// Simple validation lists to avoid heavy CSV parsing during static generation
+const VALID_CITIES = [
+  'los-angeles', 'san-diego', 'san-francisco', 'san-jose', 
+  'fresno', 'sacramento', 'long-beach', 'oakland', 
+  'bakersfield', 'anaheim'
+]
+
+const VALID_SERVICES = [
+  'water-damage-restoration', 'fire-damage-restoration', 'mold-removal',
+  'storm-damage-repair', 'sewage-cleanup', 'basement-flood-cleanup'
+]
+
+export async function generateStaticParams() {
+  // Return empty array to disable static generation in development
+  if (process.env.NODE_ENV === 'development') {
+    return []
+  }
+  
+  try {
+    const allServices = loadServiceData()
+    console.log(`Generating ${allServices.length} service params`)
+    return allServices.map((service) => ({
+      city: service.city_slug,
+      service: service.service_slug,
+    }))
+  } catch (error) {
+    console.error('Error generating service static params:', error)
+    return []
+  }
+}
+
+export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
+  const serviceData = getServiceBySlug(params.city, params.service)
+  if (!serviceData) {
+    return {
+      title: 'Service Not Found',
+      description: 'Service not found'
+    }
+  }
+  
+  return {
+    title: serviceData.meta_title,
+    description: serviceData.meta_description,
+    keywords: serviceData.service_keywords,
+    openGraph: {
+      title: serviceData.meta_title,
+      description: serviceData.meta_description,
+      type: 'website',
+      locale: 'en_US',
+      images: [
+        {
+          url: serviceData.image_url,
+          width: 1200,
+          height: 630,
+          alt: `${serviceData.service} in ${serviceData.city}`,
+        },
+      ],
+    },
+    alternates: {
+      canonical: `https://emergencywaterpros.com/${params.city}/${params.service}`
+    }
+  }
+}
+
+export default function ServicePage({ params }: ServicePageProps) {
+  const serviceData = getServiceBySlug(params.city, params.service)
+  
+  if (!serviceData) {
+    notFound()
+  }
+  
+  return (
+    <main className="min-h-screen">
+      {/* Structured Data for Service SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": `Emergency Water Pros ${serviceData.city}`,
+            "description": serviceData.intro_paragraph,
+            "url": `https://emergencywaterpros.com/${params.city}/${params.service}`,
+            "telephone": "+1-800-WATER-911",
+            "email": "help@emergencywaterpros.com",
+            "logo": "https://emergencywaterpros.com/logo.png",
+            "image": serviceData.image_url,
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": serviceData.city,
+              "addressRegion": serviceData.state_abbr,
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": serviceData.lat || "0",
+              "longitude": serviceData.lon || "0"
+            },
+            "openingHours": "Mo-Su 00:00-23:59",
+            "priceRange": "$$",
+            "serviceArea": {
+              "@type": "City",
+              "name": serviceData.city,
+              "addressRegion": serviceData.state_abbr,
+              "addressCountry": "US"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "500",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": [
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Sarah Johnson"
+                },
+                "reviewBody": `Excellent ${serviceData.service.toLowerCase()} service in ${serviceData.city}. Professional team, fast response, and quality work.`
+              }
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": serviceData.service,
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": serviceData.service,
+                    "description": serviceData.intro_paragraph,
+                    "serviceType": serviceData.service,
+                    "provider": {
+                      "@type": "LocalBusiness",
+                      "name": "Emergency Water Pros",
+                      "telephone": "+1-800-WATER-911"
+                    },
+                    "areaServed": {
+                      "@type": "City",
+                      "name": serviceData.city,
+                      "addressRegion": serviceData.state_abbr
+                    },
+                    "availability": "https://schema.org/InStock",
+                    "businessFunction": "https://schema.org/Sell"
+                  },
+                  "availability": "https://schema.org/InStock",
+                  "businessFunction": "https://schema.org/Sell"
+                }
+              ]
+            },
+            "sameAs": [
+              "https://www.facebook.com/emergencywaterpros",
+              "https://www.linkedin.com/company/emergencywaterpros",
+              "https://www.bbb.org/us/ca/emergencywaterpros"
+            ],
+            "paymentAccepted": ["Cash", "Credit Card", "Insurance"],
+            "currenciesAccepted": "USD"
+          })
+        }}
+      />
+
+      <EmergencyBanner />
+      <div className="pt-16">
+        <ServiceHeroSection serviceData={serviceData} />
+        <ServiceProcessSection serviceData={serviceData} />
+        <ServiceComplianceSection serviceData={serviceData} />
+        <ServiceTestimonialsSection serviceData={serviceData} />
+        <ContactSection cityData={serviceData} />
+      </div>
+      
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12 border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="md:col-span-2">
+              <h3 className="text-2xl heading-secondary mb-4">Emergency Water Pros</h3>
+              <p className="text-gray-300 body-text mb-4 max-w-md">
+                Professional {serviceData.service.toLowerCase()} and emergency response services in {serviceData.city}, {serviceData.state_abbr}. 
+                Your trusted local partner in property restoration.
+              </p>
+              <div className="flex gap-4">
+                <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold">EW</span>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="text-lg heading-secondary mb-4">Quick Links</h4>
+              <ul className="space-y-2 text-gray-300 body-text">
+                <li>
+                  <a href={`/${params.city}`} className="hover:text-blue-400 transition-colors">
+                    All Services in {serviceData.city}
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className="hover:text-blue-400 transition-colors">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="hover:text-blue-400 transition-colors">
+                    Get Free Estimate
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+1-800-WATER-911" className="hover:text-blue-400 transition-colors">
+                    Emergency Hotline
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-lg heading-secondary mb-4">Contact Info</h4>
+              <div className="space-y-2 text-gray-300 body-text">
+                <div className="flex items-center gap-2">
+                  <span>📞</span>
+                  <a href="tel:+1-800-WATER-911" className="hover:text-blue-400 transition-colors">
+                    (800) WATER-911
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span>📧</span>
+                  <span>help@emergencywaterpros.com</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span>📍</span>
+                  <span>Serving {serviceData.city}, {serviceData.state_abbr}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span>⏰</span>
+                  <span>24/7 Emergency Response</span>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="text-lg heading-secondary mb-4">Service Area</h4>
+              <div className="text-gray-300 body-text">
+                <p className="mb-2">Serving {serviceData.city} and surrounding areas within {serviceData.service_area_radius_miles} miles.</p>
+                <p className="text-sm">Licensed & insured in {serviceData.state}.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 body-text">
+            <p>&copy; 2024 Emergency Water Pros. All rights reserved. Licensed & Insured in {serviceData.state}.</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+  )
+}
