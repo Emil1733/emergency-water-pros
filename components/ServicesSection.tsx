@@ -97,7 +97,7 @@ export default function ServicesSection() {
             <h3 className="text-2xl heading-secondary mb-4 text-black">
               Need Immediate Assistance?
             </h3>
-            <p className="body-text mb-6 opacity-90">
+            <p className="body-text mb-6 text-black">
               Our certified technicians are standing by 24/7 to help restore your property
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
