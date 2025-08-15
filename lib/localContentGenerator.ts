@@ -2,7 +2,7 @@ import { LocalClimateData, LocalHousingData, LocalRiskFactors, LocalBusinessData
 
 // Generate unique intro paragraphs based on local data
 export function generateClimateIntro(city: string, climate: LocalClimateData): string {
-  const intros = []
+  const intros: string[] = []
   
   if (climate.flood_risk_zone === 'A' || climate.flood_risk_zone === 'AE') {
     intros.push(`${city} sits in a high-risk flood zone, making professional water damage services critical for homeowners.`)
@@ -31,7 +31,7 @@ export function generateClimateIntro(city: string, climate: LocalClimateData): s
 
 // Generate risk analysis based on local factors
 export function generateRiskAnalysis(city: string, risks: LocalRiskFactors, housing: LocalHousingData, climate: LocalClimateData): string {
-  const analysis = []
+  const analysis: string[] = []
   
   if (housing.median_home_age > 40) {
     analysis.push(`With a median home age of ${housing.median_home_age} years, ${city} properties often feature aging plumbing systems prone to failures.`)
@@ -54,7 +54,7 @@ export function generateRiskAnalysis(city: string, risks: LocalRiskFactors, hous
 
 // Generate seasonal recommendations
 export function generateSeasonalAdvice(city: string, climate: LocalClimateData, risks: LocalRiskFactors): string[] {
-  const advice = []
+  const advice: string[] = []
   
   risks.peak_damage_months.forEach(month => {
     if (month === 'January' || month === 'February' || month === 'December') {
@@ -84,7 +84,7 @@ export function generateSeasonalAdvice(city: string, climate: LocalClimateData, 
 
 // Generate local expertise content
 export function generateLocalExpertise(city: string, housing: LocalHousingData, business: LocalBusinessData): string {
-  const expertise = []
+  const expertise: string[] = []
   
   if (business.average_response_time_minutes < 60) {
     expertise.push(`Our ${city} team maintains a ${business.average_response_time_minutes}-minute average response time, faster than the industry standard.`)
@@ -116,7 +116,7 @@ export function enhanceContentWithLocalData(
 ) {
   return {
     enhanced_intro: generateClimateIntro(city, climate),
-    risk_analysis: generateRiskAnalysis(city, risks, housing),
+    risk_analysis: generateRiskAnalysis(city, risks, housing, climate),
     seasonal_advice: generateSeasonalAdvice(city, climate, risks),
     local_expertise: generateLocalExpertise(city, housing, business),
     meta_description_enhancement: `Specialized ${service.toLowerCase()} in ${city}. Local experts understanding ${city}'s unique ${risks.soil_type} soil and ${climate.flood_risk_zone} flood zone challenges.`
