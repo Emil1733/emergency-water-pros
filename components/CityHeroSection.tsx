@@ -11,7 +11,7 @@ interface CityHeroSectionProps {
 
 export default function CityHeroSection({ cityData }: CityHeroSectionProps) {
   return (
-    <section className="relative min-h-[calc(100vh-var(--total-header-with-breadcrumbs))] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
