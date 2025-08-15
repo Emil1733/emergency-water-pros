@@ -33,7 +33,7 @@ function sendToAnalytics(metric: PerformanceMetric) {
 // Web Vitals thresholds
 const THRESHOLDS = {
   LCP: { good: 2500, poor: 4000 },
-  FID: { good: 100, poor: 300 }, 
+  INP: { good: 200, poor: 500 }, 
   CLS: { good: 0.1, poor: 0.25 },
   TTFB: { good: 800, poor: 1800 },
   FCP: { good: 1800, poor: 3000 }
@@ -55,16 +55,16 @@ export function initPerformanceTracking() {
   if (typeof window === 'undefined') return
 
   // Dynamic import of web-vitals library
-  import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
+  import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
     // Largest Contentful Paint
     onLCP((metric) => {
       const rating = getPerformanceRating('LCP', metric.value)
       sendToAnalytics({ ...metric, rating } as any)
     })
 
-    // First Input Delay
-    onFID((metric) => {
-      const rating = getPerformanceRating('FID', metric.value)
+    // Interaction to Next Paint (replaces FID)
+    onINP((metric) => {
+      const rating = getPerformanceRating('INP', metric.value)
       sendToAnalytics({ ...metric, rating } as any)
     })
 
