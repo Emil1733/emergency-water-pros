@@ -139,7 +139,7 @@ export default function WaterRestorationPage() {
       />
 
       <EmergencyBanner />
-      <div className="page-content-without-breadcrumbs"> {/* Account for fixed emergency banner */}
+      <div>
         <HeroSection />
         <ServicesSection />
         <ProcessTimeline />

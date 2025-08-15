@@ -14,7 +14,7 @@ interface BreadcrumbsProps {
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
-    <nav aria-label="Breadcrumb" className="py-4 px-4 sm:px-6 lg:px-8 bg-gray-50 border-b border-gray-200">
+    <nav aria-label="Breadcrumb" className="fixed top-[56px] left-0 right-0 z-40 py-4 px-4 sm:px-6 lg:px-8 bg-gray-50/95 backdrop-blur-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto">
         <ol className="flex items-center space-x-2 text-sm text-gray-600">
           {/* Home */}
