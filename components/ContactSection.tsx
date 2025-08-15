@@ -56,7 +56,7 @@ export default function ContactSection({ cityData, serviceType }: ContactSection
                   size="lg" 
                   variant="outline-light"
                   href="tel:+18886806768"
-                  className="w-full hover:text-emergency"
+                  className="w-full bg-black text-white border-black hover:bg-black/80 hover:text-white"
                   aria-label="Call Emergency Water Pros now"
                 >
                   <Phone className="mr-2" size={20} />
