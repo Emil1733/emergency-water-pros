@@ -1,18 +1,18 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getCityServices } from '@/lib/serviceData'
-import dynamic from 'next/dynamic'
+import dynamicImport from 'next/dynamic'
 import EmergencyBanner from "@/components/EmergencyBanner"
 import CityHeroSection from "@/components/CityHeroSection"
 
 // Lazy load below-the-fold components for better Core Web Vitals
-const CityServicesSection = dynamic(() => import("@/components/CityServicesSection"), {
+const CityServicesSection = dynamicImport(() => import("@/components/CityServicesSection"), {
   loading: () => <div className="h-96 bg-gray-50 animate-pulse rounded-lg" />
 })
-const CityTestimonialsSection = dynamic(() => import("@/components/CityTestimonialsSection"), {
+const CityTestimonialsSection = dynamicImport(() => import("@/components/CityTestimonialsSection"), {
   loading: () => <div className="h-64 bg-gray-50 animate-pulse rounded-lg" />
 })
-const ContactSection = dynamic(() => import("@/components/ContactSection"), {
+const ContactSection = dynamicImport(() => import("@/components/ContactSection"), {
   loading: () => <div className="h-96 bg-gray-50 animate-pulse rounded-lg" />
 })
 
