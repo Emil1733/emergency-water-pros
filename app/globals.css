@@ -50,6 +50,13 @@
 
 :root {
   --radius: 12px;
+  
+  /* Layout spacing variables for consistent header spacing */
+  --emergency-banner-height: 56px;
+  --breadcrumb-height: 48px;
+  --total-header-with-breadcrumbs: 104px; /* 56 + 48 */
+  --total-header-without-breadcrumbs: 56px;
+  
   --background: #ffffff;
   --foreground: #262626;
   --card: #ffffff;
@@ -213,5 +220,35 @@
   100% {
     transform: scale(4);
     opacity: 0;
+  }
+}
+
+/* Utility classes for consistent page spacing */
+@layer utilities {
+  .page-content-with-breadcrumbs {
+    padding-top: var(--total-header-with-breadcrumbs);
+  }
+  
+  .page-content-without-breadcrumbs {
+    padding-top: var(--total-header-without-breadcrumbs);
+  }
+  
+  /* Smooth hero sections that account for header */
+  .hero-with-header {
+    min-height: calc(100vh - var(--emergency-banner-height));
+  }
+  
+  .hero-with-header-and-breadcrumbs {
+    min-height: calc(100vh - var(--total-header-with-breadcrumbs));
+  }
+  
+  /* Responsive header spacing adjustments */
+  @media (max-width: 640px) {
+    :root {
+      --emergency-banner-height: 64px; /* Slightly taller on mobile */
+      --breadcrumb-height: 56px;
+      --total-header-with-breadcrumbs: 120px;
+      --total-header-without-breadcrumbs: 64px;
+    }
   }
 }
