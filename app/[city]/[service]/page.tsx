@@ -210,7 +210,7 @@ export default function ServicePage({ params }: ServicePageProps) {
         { label: serviceData.city, href: `/${params.city}` },
         { label: serviceData.service }
       ]} />
-      <div className="pt-16">
+      <div className="pt-24">
         <ServiceHeroSection serviceData={serviceData} />
         <ServiceProcessSection serviceData={serviceData} />
         <ServiceComplianceSection serviceData={serviceData} />

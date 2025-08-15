@@ -171,7 +171,7 @@ export default function CityPage({ params }: CityPageProps) {
       <Breadcrumbs items={[
         { label: cityData.city, href: `/${params.city}` }
       ]} />
-      <div className="pt-16">
+      <div className="pt-24">
         <CityHeroSection cityData={cityData} />
         <CityServicesSection services={cityServices} citySlug={params.city} />
         <CityTestimonialsSection cityName={cityData.city} />
