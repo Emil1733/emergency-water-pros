@@ -21,12 +21,12 @@ export default function EmergencyBanner() {
           <Button 
             size="sm" 
             variant="outline-light"
-            href="tel:+15551234357"
+            href="tel:+18886806768"
             className="hover:text-emergency"
             aria-label="Call emergency hotline"
           >
             <Phone size={16} className="mr-2" />
-            (555) 123-HELP
+            (888) 680-6768
           </Button>
         </div>
       </div>

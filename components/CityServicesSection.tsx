@@ -97,7 +97,7 @@ export default function CityServicesSection({ services, citySlug }: CityServices
                       className="w-full border-water-primary/30 text-water-primary hover:bg-water-primary/5 rounded-lg"
                     >
                       <Phone size={16} className="mr-2" />
-                      <a href="tel:+1-800-WATER-911">Call Now</a>
+                      <a href="tel:+18886806768">Call Now</a>
                     </Button>
                   </div>
                 </div>
@@ -129,7 +129,7 @@ export default function CityServicesSection({ services, citySlug }: CityServices
                 className="bg-emergency hover:bg-emergency-hover text-emergency-foreground px-8 py-4 rounded-full shadow-lg"
               >
                 <Phone className="mr-2" size={20} />
-                <a href="tel:+1-800-WATER-911">Emergency: (800) WATER-911</a>
+                <a href="tel:+18886806768">Emergency: (888) 680-6768</a>
               </Button>
               
               <Button 

@@ -175,10 +175,10 @@ export default function LATestimonialsSection() {
                 Get Your Free LA Assessment
               </button>
               <a 
-                href="tel:3235551234"
+                href="tel:+18886806768"
                 className="px-8 py-4 border-2 border-white bg-white/10 text-white hover:bg-white hover:text-blue-600 rounded-full transition-all duration-300 body-text-medium backdrop-blur-sm"
               >
-                Call (323) 555-1234
+                Call (888) 680-6768
               </a>
             </div>
           </div>

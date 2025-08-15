@@ -113,7 +113,7 @@ export default function ServicesSection() {
               <Button 
                 size="lg"
                 variant="emergency"
-                href="tel:+18009283791"
+                href="tel:+18886806768"
                 aria-label="Call Emergency Water Pros hotline"
               >
                 Emergency Hotline

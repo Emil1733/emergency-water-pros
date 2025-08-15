@@ -46,7 +46,7 @@ export default function ContactSection({ cityData, serviceType }: ContactSection
               </CardHeader>
               <CardContent className="text-center">
                 <div className="text-3xl font-bold mb-4 heading-primary">
-                  (800) WATER-911
+                  (888) 680-6768
                 </div>
                 <p className="body-text mb-6 opacity-90">
                   Available 24/7 for immediate emergency response in {cityData.city}. 
@@ -55,7 +55,7 @@ export default function ContactSection({ cityData, serviceType }: ContactSection
                 <Button 
                   size="lg" 
                   variant="outline-light"
-                  href="tel:+18009283791"
+                  href="tel:+18886806768"
                   className="w-full hover:text-emergency"
                   aria-label="Call Emergency Water Pros now"
                 >
@@ -82,7 +82,7 @@ export default function ContactSection({ cityData, serviceType }: ContactSection
             </div>
             <h3 className="text-lg heading-secondary mb-2">Call Us</h3>
             <p className="text-gray-300 body-text">
-              <a href="tel:+1-800-WATER-911" className="hover:text-water-secondary transition-colors">
+              <a href="tel:+18886806768" className="hover:text-water-secondary transition-colors">
                 (800) WATER-911
               </a>
             </p>

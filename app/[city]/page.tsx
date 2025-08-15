@@ -101,7 +101,7 @@ export default function CityPage({ params }: CityPageProps) {
             "name": `Emergency Water Pros ${cityData.city}`,
             "description": `Professional water damage restoration services in ${cityData.city}`,
             "url": `https://emergencywaterpros.com/${params.city}`,
-            "telephone": "+1-800-WATER-911",
+            "telephone": "+1-888-680-6768",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": cityData.city,
@@ -197,8 +197,8 @@ export default function CityPage({ params }: CityPageProps) {
               <div className="space-y-2 text-gray-300 body-text">
                 <div className="flex items-center gap-2">
                   <span>📞</span>
-                  <a href="tel:+1-800-WATER-911" className="hover:text-blue-400 transition-colors">
-                    (800) WATER-911
+                  <a href="tel:+18886806768" className="hover:text-blue-400 transition-colors">
+                    (888) 680-6768
                   </a>
                 </div>
                 <div className="flex items-center gap-2">

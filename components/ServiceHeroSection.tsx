@@ -96,7 +96,7 @@ export default function ServiceHeroSection({ serviceData }: ServiceHeroSectionPr
               className="px-8 py-6 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
               <Phone className="mr-2" size={20} />
-              <a href="tel:+1-800-WATER-911">Emergency: (800) WATER-911</a>
+              <a href="tel:+18886806768">Emergency: (888) 680-6768</a>
             </Button>
             <Button 
               variant="outline-light" 

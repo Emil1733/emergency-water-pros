@@ -101,7 +101,7 @@ export async function POST(request: NextRequest) {
     console.error('API Error:', error)
     return NextResponse.json(
       { 
-        error: 'Internal server error. Please try again or call us directly at (800) WATER-911.',
+        error: 'Internal server error. Please try again or call us directly at (888) 680-6768.',
         details: process.env.NODE_ENV === 'development' ? (error as Error).message : undefined
       },
       { status: 500 }

@@ -21,7 +21,7 @@ export default function WaterRestorationPage() {
             "description": "Professional 24/7 water damage restoration services across California. IICRC certified technicians, direct insurance billing, and emergency response.",
             "url": "https://emergencywaterpros.com",
             "logo": "https://emergencywaterpros.com/logo.png",
-            "telephone": "+1-800-WATER-911",
+            "telephone": "+1-888-680-6768",
             "email": "help@emergencywaterpros.com",
             "address": {
               "@type": "PostalAddress",
@@ -204,8 +204,8 @@ export default function WaterRestorationPage() {
             <div>
               <h4 className="text-lg heading-secondary mb-4">Contact</h4>
               <ul className="space-y-2 text-gray-300 body-text">
-                <li>Emergency: (555) 123-HELP</li>
-                <li>Office: (555) 123-4567</li>
+                <li>Emergency: (888) 680-6768</li>
+                <li>Office: (888) 680-6768</li>
                 <li>help@emergencywaterpros.com</li>
                 <li>Available 24/7</li>
               </ul>

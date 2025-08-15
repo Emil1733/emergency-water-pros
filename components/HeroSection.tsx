@@ -51,12 +51,12 @@ export default function HeroSection() {
             <Button 
               size="lg" 
               variant="emergency"
-              href="tel:+15551234357"
+              href="tel:+18886806768"
               className="px-8 py-6 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
               aria-label="Call emergency hotline now"
             >
               <Phone className="mr-2" size={20} />
-              Call Now: (555) 123-HELP
+              Call Now: (888) 680-6768
             </Button>
             <Button 
               variant="outline-light" 

@@ -157,7 +157,7 @@ export default function LeadCaptureForm({ cityData, serviceType }: LeadCaptureFo
           </h3>
           
           <p className="text-gray-600 body-text">
-            Fill out this form for immediate response or call <strong>(800) WATER-911</strong> for emergency service.
+            Fill out this form for immediate response or call <strong>(888) 680-6768</strong> for emergency service.
           </p>
         </div>
 
@@ -181,7 +181,7 @@ export default function LeadCaptureForm({ cityData, serviceType }: LeadCaptureFo
               <div>
                 <div className="text-emergency font-medium">Submission Failed</div>
                 <div className="text-emergency text-sm">
-                  {errorMessage || 'Please try again or call us directly at (800) WATER-911'}
+                  {errorMessage || 'Please try again or call us directly at (888) 680-6768'}
                 </div>
               </div>
             </div>
@@ -331,10 +331,10 @@ export default function LeadCaptureForm({ cityData, serviceType }: LeadCaptureFo
               variant="outline"
               size="lg"
               className="border-emergency text-emergency hover:bg-emergency/5"
-              onClick={() => window.location.href = 'tel:+1-800-WATER-911'}
+              onClick={() => window.location.href = 'tel:+18886806768'}
             >
               <Phone size={20} className="mr-2" />
-              Call (800) WATER-911 Now
+              Call (888) 680-6768 Now
             </Button>
           </div>
         </form>

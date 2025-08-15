@@ -36,7 +36,7 @@ export default function LosAngelesWaterRestorationPage() {
             "name": "Emergency Water Pros Los Angeles",
             "description": "Professional water damage restoration services in Los Angeles",
             "url": "https://emergencywaterpros.com/los-angeles",
-            "telephone": "+1-323-555-1234",
+            "telephone": "+1-888-680-6768",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "123 Main Street",
@@ -146,8 +146,8 @@ export default function LosAngelesWaterRestorationPage() {
             <div>
               <h4 className="text-lg heading-secondary mb-4">Contact LA Office</h4>
               <ul className="space-y-2 text-gray-300 body-text">
-                <li>Emergency: (323) 555-HELP</li>
-                <li>Office: (323) 555-1234</li>
+                <li>Emergency: (888) 680-6768</li>
+                <li>Office: (888) 680-6768</li>
                 <li>la@emergencywaterpros.com</li>
                 <li>123 Main St, LA 90210</li>
                 <li>Available 24/7</li>

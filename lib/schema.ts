@@ -11,7 +11,7 @@ export function generateSchemaOrg({ type, data, citySlug, serviceSlug }: SchemaO
   const baseData = {
     "@context": "https://schema.org",
     "name": "Emergency Water Pros",
-    "telephone": "+1-800-WATER-911",
+    "telephone": "+1-888-680-6768",
     "email": "help@emergencywaterpros.com",
     "logo": "https://emergencywaterpros.com/logo.png",
     "openingHours": "Mo-Su 00:00-23:59",
@@ -237,7 +237,7 @@ export function generateSchemaOrg({ type, data, citySlug, serviceSlug }: SchemaO
                 "provider": {
                   "@type": "LocalBusiness",
                   "name": "Emergency Water Pros",
-                  "telephone": "+1-800-WATER-911"
+                  "telephone": "+1-888-680-6768"
                 },
                 "areaServed": {
                   "@type": "City",

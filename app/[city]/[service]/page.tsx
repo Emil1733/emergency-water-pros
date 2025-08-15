@@ -102,7 +102,7 @@ export default function ServicePage({ params }: ServicePageProps) {
             "name": `Emergency Water Pros ${serviceData.city}`,
             "description": serviceData.intro_paragraph,
             "url": `https://emergencywaterpros.com/${params.city}/${params.service}`,
-            "telephone": "+1-800-WATER-911",
+            "telephone": "+1-888-680-6768",
             "email": "help@emergencywaterpros.com",
             "logo": "https://emergencywaterpros.com/logo.png",
             "image": serviceData.image_url,
@@ -161,7 +161,7 @@ export default function ServicePage({ params }: ServicePageProps) {
                     "provider": {
                       "@type": "LocalBusiness",
                       "name": "Emergency Water Pros",
-                      "telephone": "+1-800-WATER-911"
+                      "telephone": "+1-888-680-6768"
                     },
                     "areaServed": {
                       "@type": "City",
@@ -232,7 +232,7 @@ export default function ServicePage({ params }: ServicePageProps) {
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+1-800-WATER-911" className="hover:text-blue-400 transition-colors">
+                  <a href="tel:+18886806768" className="hover:text-blue-400 transition-colors">
                     Emergency Hotline
                   </a>
                 </li>
@@ -244,8 +244,8 @@ export default function ServicePage({ params }: ServicePageProps) {
               <div className="space-y-2 text-gray-300 body-text">
                 <div className="flex items-center gap-2">
                   <span>📞</span>
-                  <a href="tel:+1-800-WATER-911" className="hover:text-blue-400 transition-colors">
-                    (800) WATER-911
+                  <a href="tel:+18886806768" className="hover:text-blue-400 transition-colors">
+                    (888) 680-6768
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
