@@ -42,7 +42,7 @@ export default function ServiceHeroSection({ serviceData }: ServiceHeroSectionPr
       <div className="absolute bottom-32 left-1/4 w-3 h-3 bg-water-secondary/40 rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
           {/* Service Badge */}
           <div className="inline-flex items-center gap-3 bg-water-primary text-white px-6 py-3 rounded-full text-sm font-medium">
