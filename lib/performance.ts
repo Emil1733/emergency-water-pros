@@ -104,8 +104,8 @@ export function trackPageLoad() {
         connect: Math.round(navigation.connectEnd - navigation.connectStart),
         ttfb: Math.round(navigation.responseStart - navigation.requestStart),
         download: Math.round(navigation.responseEnd - navigation.responseStart),
-        domContentLoaded: Math.round(navigation.domContentLoadedEventEnd - navigation.navigationStart),
-        load: Math.round(navigation.loadEventEnd - navigation.navigationStart)
+        domContentLoaded: Math.round(navigation.domContentLoadedEventEnd - navigation.fetchStart),
+        load: Math.round(navigation.loadEventEnd - navigation.fetchStart)
       }
 
       console.log('Page Load Metrics:', {
