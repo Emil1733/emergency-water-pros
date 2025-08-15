@@ -4,6 +4,7 @@ import { getCityServices } from '@/lib/serviceData'
 import dynamicImport from 'next/dynamic'
 import EmergencyBanner from "@/components/EmergencyBanner"
 import CityHeroSection from "@/components/CityHeroSection"
+import Breadcrumbs from "@/components/Breadcrumbs"
 
 // Lazy load below-the-fold components for better Core Web Vitals
 const CityServicesSection = dynamicImport(() => import("@/components/CityServicesSection"), {
@@ -14,6 +15,9 @@ const CityTestimonialsSection = dynamicImport(() => import("@/components/CityTes
 })
 const ContactSection = dynamicImport(() => import("@/components/ContactSection"), {
   loading: () => <div className="h-96 bg-gray-50 animate-pulse rounded-lg" />
+})
+const FAQSection = dynamicImport(() => import("@/components/FAQSection"), {
+  loading: () => <div className="h-64 bg-gray-50 animate-pulse rounded-lg" />
 })
 
 interface CityPageProps {
@@ -58,11 +62,11 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
     
     return {
       title: `Water Damage Restoration in ${cityName}, ${state} | Emergency Response 24/7 | Emergency Water Pros`,
-      description: `Professional water damage restoration services in ${cityName}, ${state}. 24/7 emergency response, licensed & IICRC certified. Call now for immediate help.`,
+      description: `Emergency water damage restoration in ${cityName}, ${state} - 45-min response time! IICRC certified, direct insurance billing, 5-star rated. Call (888) 680-6768 for immediate help.`,
       keywords: `water damage restoration ${cityName}, emergency water damage ${cityName}, flood cleanup ${cityName}, ${cityName} water damage contractor, ${state} water damage restoration`,
       openGraph: {
         title: `Water Damage Restoration in ${cityName}, ${state} | Emergency Water Pros`,
-        description: `Expert water damage restoration across all ${cityName} neighborhoods. 45-minute emergency response, licensed & insured.`,
+        description: `#1 ${cityName} water damage restoration company. 45-min emergency response, 5-star rated, direct insurance billing. Call (888) 680-6768 now!`,
         type: 'website',
         locale: 'en_US',
       },
@@ -164,10 +168,14 @@ export default function CityPage({ params }: CityPageProps) {
       />
 
       <EmergencyBanner />
+      <Breadcrumbs items={[
+        { label: cityData.city, href: `/${params.city}` }
+      ]} />
       <div className="pt-16">
         <CityHeroSection cityData={cityData} />
         <CityServicesSection services={cityServices} citySlug={params.city} />
         <CityTestimonialsSection cityName={cityData.city} />
+        <FAQSection cityName={cityData.city} />
         <ContactSection cityData={cityData} />
       </div>
       

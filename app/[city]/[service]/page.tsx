@@ -4,6 +4,7 @@ import { getServiceBySlug, getCitiesData, loadServiceData } from '@/lib/serviceD
 import dynamicImport from 'next/dynamic'
 import EmergencyBanner from "@/components/EmergencyBanner"
 import ServiceHeroSection from "@/components/ServiceHeroSection"
+import Breadcrumbs from "@/components/Breadcrumbs"
 
 // Lazy load below-the-fold components for better performance
 const ServiceProcessSection = dynamicImport(() => import("@/components/ServiceProcessSection"), {
@@ -17,6 +18,12 @@ const ServiceComplianceSection = dynamicImport(() => import("@/components/Servic
 })
 const ContactSection = dynamicImport(() => import("@/components/ContactSection"), {
   loading: () => <div className="h-96 bg-gray-50 animate-pulse rounded-lg" />
+})
+const RelatedServices = dynamicImport(() => import("@/components/RelatedServices"), {
+  loading: () => <div className="h-64 bg-gray-50 animate-pulse rounded-lg" />
+})
+const FAQSection = dynamicImport(() => import("@/components/FAQSection"), {
+  loading: () => <div className="h-64 bg-gray-50 animate-pulse rounded-lg" />
 })
 
 interface ServicePageProps {
@@ -72,11 +79,11 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   
   return {
     title: serviceData.meta_title,
-    description: serviceData.meta_description,
+    description: `${serviceData.service} in ${serviceData.city}, ${serviceData.state_abbr} - 45-min emergency response! IICRC certified, 5-star rated, direct insurance billing. Call (888) 680-6768 now for immediate help.`,
     keywords: serviceData.service_keywords,
     openGraph: {
       title: serviceData.meta_title,
-      description: serviceData.meta_description,
+      description: `#1 ${serviceData.service.toLowerCase()} company in ${serviceData.city}. 45-min response, 5-star rated, direct insurance billing. Call (888) 680-6768!`,
       type: 'website',
       locale: 'en_US',
       images: [
@@ -199,11 +206,21 @@ export default function ServicePage({ params }: ServicePageProps) {
       />
 
       <EmergencyBanner />
+      <Breadcrumbs items={[
+        { label: serviceData.city, href: `/${params.city}` },
+        { label: serviceData.service }
+      ]} />
       <div className="pt-16">
         <ServiceHeroSection serviceData={serviceData} />
         <ServiceProcessSection serviceData={serviceData} />
         <ServiceComplianceSection serviceData={serviceData} />
         <ServiceTestimonialsSection serviceData={serviceData} />
+        <RelatedServices 
+          citySlug={params.city} 
+          currentService={params.service}
+          cityName={serviceData.city}
+        />
+        <FAQSection cityName={serviceData.city} serviceName={serviceData.service} />
         <ContactSection cityData={serviceData} />
       </div>
       
