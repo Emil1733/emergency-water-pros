@@ -17,7 +17,11 @@
       "Bash(git remote add:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)",
-      "Bash(npx next build:*)"
+      "Bash(npx next build:*)",
+      "WebFetch(domain:www.emergencywaterpros.com)",
+      "WebFetch(domain:pagespeed.web.dev)",
+      "WebFetch(domain:search.google.com)",
+      "WebFetch(domain:www.ssllabs.com)"
     ],
     "deny": [],
     "defaultMode": "acceptEdits"
