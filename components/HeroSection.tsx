@@ -29,8 +29,8 @@ export default function HeroSection() {
       <div className="absolute bottom-32 left-1/4 w-3 h-3 bg-white/25 rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
 
       {/* Main Content */}
-      <div className="relative z-50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="space-y-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="space-y-8 pt-[72px] sm:pt-[80px]">
           {/* Emergency Banner */}
           <div className="inline-flex items-center gap-2 bg-emergency text-emergency-foreground px-6 py-3 rounded-full text-sm font-medium animate-pulse">
             <Phone size={16} />
