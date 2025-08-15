@@ -54,9 +54,9 @@ export default function ContactSection({ cityData, serviceType }: ContactSection
                 </p>
                 <Button 
                   size="lg" 
-                  variant="outline-light"
+                  variant="emergency"
                   href="tel:+18886806768"
-                  className="w-full bg-black text-white border-black hover:bg-black/80 hover:text-white"
+                  className="w-full"
                   aria-label="Call Emergency Water Pros now"
                 >
                   <Phone className="mr-2" size={20} />
