@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getCityServices } from '@/lib/serviceData'
 import dynamicImport from 'next/dynamic'
+import Image from "next/image"
 import EmergencyBanner from "@/components/EmergencyBanner"
 import CityHeroSection from "@/components/CityHeroSection"
 import Breadcrumbs from "@/components/Breadcrumbs"
