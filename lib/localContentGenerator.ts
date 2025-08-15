@@ -30,7 +30,7 @@ export function generateClimateIntro(city: string, climate: LocalClimateData): s
 }
 
 // Generate risk analysis based on local factors
-export function generateRiskAnalysis(city: string, risks: LocalRiskFactors, housing: LocalHousingData): string {
+export function generateRiskAnalysis(city: string, risks: LocalRiskFactors, housing: LocalHousingData, climate: LocalClimateData): string {
   const analysis = []
   
   if (housing.median_home_age > 40) {
