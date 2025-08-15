@@ -10,12 +10,15 @@ export default function HeroSection() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1488642945284-f5b65425f15a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHw2fHx3YXRlciUyMGRhbWFnZSUyMHJlc3RvcmF0aW9uJTIwZXF1aXBtZW50JTIwcHJvZmVzc2lvbmFsJTIwd29ya2Vyc3xlbnwwfDB8fGJsdWV8MTc1NDk5OTg2M3ww&ixlib=rb-4.1.0&q=85"
+          src="https://images.unsplash.com/photo-1488642945284-f5b65425f15a?w=1920&h=1080&q=75&fm=webp&auto=format"
           alt="Professional water damage restoration scene"
           fill
           className="object-cover"
           priority
           sizes="100vw"
+          quality={75}
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
         />
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-600/60"></div>
       </div>

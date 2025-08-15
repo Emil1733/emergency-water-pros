@@ -1,12 +1,23 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getServiceBySlug, getCitiesData, loadServiceData } from '@/lib/serviceData'
+import dynamic from 'next/dynamic'
 import EmergencyBanner from "@/components/EmergencyBanner"
 import ServiceHeroSection from "@/components/ServiceHeroSection"
-import ServiceProcessSection from "@/components/ServiceProcessSection"
-import ServiceTestimonialsSection from "@/components/ServiceTestimonialsSection"
-import ServiceComplianceSection from "@/components/ServiceComplianceSection"
-import ContactSection from "@/components/ContactSection"
+
+// Lazy load below-the-fold components for better performance
+const ServiceProcessSection = dynamic(() => import("@/components/ServiceProcessSection"), {
+  loading: () => <div className="h-96 bg-gray-50 animate-pulse rounded-lg" />
+})
+const ServiceTestimonialsSection = dynamic(() => import("@/components/ServiceTestimonialsSection"), {
+  loading: () => <div className="h-64 bg-gray-50 animate-pulse rounded-lg" />
+})
+const ServiceComplianceSection = dynamic(() => import("@/components/ServiceComplianceSection"), {
+  loading: () => <div className="h-64 bg-gray-50 animate-pulse rounded-lg" />
+})
+const ContactSection = dynamic(() => import("@/components/ContactSection"), {
+  loading: () => <div className="h-96 bg-gray-50 animate-pulse rounded-lg" />
+})
 
 interface ServicePageProps {
   params: {

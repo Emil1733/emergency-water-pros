@@ -10,12 +10,15 @@ export default function LAHeroSection() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1513711487224-63b774e12f4d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHw0fHxMb3MlMjBBbmdlbGVzJTIwc2t5bGluZSUyMGRvd250b3duJTIwTEElMjBjaXR5JTIwYnVpbGRpbmdzfGVufDB8MHx8Ymx1ZXwxNzU1MDcyMjg2fDA&ixlib=rb-4.1.0&q=85"
+          src="https://images.unsplash.com/photo-1513711487224-63b774e12f4d?w=1920&h=1080&q=75&fm=webp&auto=format"
           alt="Los Angeles skyline cityscape"
           fill
           className="object-cover"
           priority
           sizes="100vw"
+          quality={75}
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
         />
         <div className="absolute inset-0 bg-gradient-to-r from-water-primary/85 to-water-accent/40"></div>
       </div>

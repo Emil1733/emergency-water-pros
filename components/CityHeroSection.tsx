@@ -15,12 +15,15 @@ export default function CityHeroSection({ cityData }: CityHeroSectionProps) {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={cityData.image_url}
+          src={`${cityData.image_url}${cityData.image_url.includes('?') ? '&' : '?'}w=1920&h=1080&q=75&fm=webp&auto=format`}
           alt={`${cityData.city} water damage restoration services`}
           fill
           className="object-cover"
           priority
           sizes="100vw"
+          quality={75}
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
         />
         <div className="absolute inset-0 bg-gradient-to-r from-water-primary/85 to-water-secondary/40"></div>
       </div>

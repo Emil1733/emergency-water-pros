@@ -18,21 +18,21 @@ const testimonials = [
     role: "Homeowner",
     content: "Emergency Water Pros saved our home after a major flood. Their team was professional, fast, and incredibly thorough. They made a devastating situation manageable.",
     rating: 5,
-    avatar: "https://i.pravatar.cc/150?img=1"
+    avatar: "https://i.pravatar.cc/96?img=1"
   },
   {
     name: "Mike Chen",
     role: "Business Owner",
     content: "When our office flooded, they had us back up and running in just 3 days. Outstanding service and communication throughout the entire process.",
     rating: 5,
-    avatar: "https://i.pravatar.cc/150?img=2"
+    avatar: "https://i.pravatar.cc/96?img=2"
   },
   {
     name: "Lisa Rodriguez",
     role: "Property Manager",
     content: "We've used Emergency Water Pros for multiple properties. Their consistency, quality, and reliability make them our go-to restoration company.",
     rating: 5,
-    avatar: "https://i.pravatar.cc/150?img=3"
+    avatar: "https://i.pravatar.cc/96?img=3"
   }
 ]
 
@@ -125,6 +125,7 @@ export default function TrustSection() {
                       <AvatarImage 
                         src={testimonial.avatar} 
                         alt={`${testimonial.name} avatar`}
+                        loading="lazy"
                         style={{ width: '48px', height: '48px' }}
                       />
                       <AvatarFallback>{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>

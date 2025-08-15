@@ -21,7 +21,8 @@
       "WebFetch(domain:www.emergencywaterpros.com)",
       "WebFetch(domain:pagespeed.web.dev)",
       "WebFetch(domain:search.google.com)",
-      "WebFetch(domain:www.ssllabs.com)"
+      "WebFetch(domain:www.ssllabs.com)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "defaultMode": "acceptEdits"

@@ -9,8 +9,8 @@ const caseStudies = [
   {
     location: "Beverly Hills Mansion",
     neighborhood: "Beverly Hills",
-    beforeImage: "https://images.unsplash.com/photo-1446712146541-843e336d8154?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBob21lJTIwd2F0ZXIlMjBkYW1hZ2UlMjB1cHNjYWxlJTIwcHJvcGVydHl8ZW58MHwwfHx8MTc1NTA3MjI4NXww&ixlib=rb-4.1.0&q=85",
-    afterImage: "https://images.unsplash.com/photo-1511894622069-3ed55ebf8f57?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBob21lJTIwd2F0ZXIlMjBkYW1hZ2UlMjB1cHNjYWxlJTIwcHJvcGVydHl8ZW58MHwwfHx8MTc1NTA3MjI4NXww&ixlib=rb-4.1.0&q=85",
+    beforeImage: "https://images.unsplash.com/photo-1446712146541-843e336d8154?w=400&h=400&q=75&fm=webp&auto=format",
+    afterImage: "https://images.unsplash.com/photo-1511894622069-3ed55ebf8f57?w=400&h=400&q=75&fm=webp&auto=format",
     challenge: "Burst pipe in luxury master suite caused extensive damage to custom millwork and marble flooring",
     solution: "Specialized drying techniques preserved original materials, custom millwork restoration, marble refinishing",
     timeline: "5 days",
@@ -20,8 +20,8 @@ const caseStudies = [
   {
     location: "Santa Monica Coastal Home",
     neighborhood: "Santa Monica",
-    beforeImage: "https://images.unsplash.com/photo-1444762908691-c8461d64d5f6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHwyfHxjb2FzdGFsJTIwaG9tZSUyMG1vZGVybiUyMGFyY2hpdGVjdHVyZSUyMENhbGlmb3JuaWElMjBwcm9wZXJ0eXxlbnwwfDB8fHwxNzU1MDcyMjg1fDA&ixlib=rb-4.1.0&q=85",
-    afterImage: "https://images.unsplash.com/photo-1663124343477-2cf4b9fa5529?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHwzfHxjb2FzdGFsJTIwaG9tZSUyMG1vZGVybiUyMGFyY2hpdGVjdHVyZSUyMENhbGlmb3JuaWElMjBwcm9wZXJ0eXxlbnwwfDB8fHwxNzU1MDcyMjg1fDA&ixlib=rb-4.1.0&q=85",
+    beforeImage: "https://images.unsplash.com/photo-1444762908691-c8461d64d5f6?w=400&h=400&q=75&fm=webp&auto=format",
+    afterImage: "https://images.unsplash.com/photo-1663124343477-2cf4b9fa5529?w=400&h=400&q=75&fm=webp&auto=format",
     challenge: "Storm surge flooding affected ground floor, salt water damage to hardwood and electrical systems",
     solution: "Salt water extraction, specialized dehumidification, electrical system restoration, hardwood refinishing",
     timeline: "7 days",
@@ -31,8 +31,8 @@ const caseStudies = [
   {
     location: "Hollywood Historic Building",
     neighborhood: "Hollywood",
-    beforeImage: "https://images.unsplash.com/photo-1543244176-0be2dfa150bc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHw4fHxsdXh1cnklMjBob21lJTIwd2F0ZXIlMjBkYW1hZ2UlMjB1cHNjYWxlJTIwcHJvcGVydHl8ZW58MHwwfHx8MTc1NTA3MjI4NXww&ixlib=rb-4.1.0&q=85",
-    afterImage: "https://images.unsplash.com/photo-1648475237029-7f853809ca14?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHw5fHxjbGVhbiUyMHJvb20lMjBtb2Rlcm4lMjBpbnRlcmlvciUyMHJlc3RvcmVkJTIwaG9tZXxlbnwwfDB8fHwxNzU0OTk5ODYzfDA&ixlib=rb-4.1.0&q=85",
+    beforeImage: "https://images.unsplash.com/photo-1543244176-0be2dfa150bc?w=400&h=400&q=75&fm=webp&auto=format",
+    afterImage: "https://images.unsplash.com/photo-1648475237029-7f853809ca14?w=400&h=400&q=75&fm=webp&auto=format",
     challenge: "1920s apartment building with original plaster walls, vintage fixtures, and historic preservation requirements",
     solution: "Heritage-compliant restoration, original plaster repair, period-appropriate materials, city permit coordination",
     timeline: "10 days",
@@ -75,6 +75,8 @@ export default function LACaseStudiesSection() {
                           width={400}
                           height={400}
                           className="w-full h-full object-cover"
+                          loading="lazy"
+                          quality={75}
                         />
                         <div className="absolute top-4 left-4">
                           <Badge className="bg-emergency text-emergency-foreground">Before</Badge>
@@ -87,6 +89,8 @@ export default function LACaseStudiesSection() {
                           width={400}
                           height={400}
                           className="w-full h-full object-cover"
+                          loading="lazy"
+                          quality={75}
                         />
                         <div className="absolute top-4 left-4">
                           <Badge className="bg-chart-4 text-white">After</Badge>
