@@ -22,7 +22,7 @@ export default function ServiceHeroSection({ serviceData }: ServiceHeroSectionPr
   const serviceIcon = serviceIcons[serviceData.service_slug as keyof typeof serviceIcons] || '🔧'
   
   return (
-    <section className="relative hero-with-header-and-breadcrumbs flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[calc(100vh-var(--total-header-with-breadcrumbs))] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
