@@ -79,7 +79,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   
   return {
     title: serviceData.meta_title,
-    description: `${serviceData.service} in ${serviceData.city}, ${serviceData.state_abbr} - 45-min emergency response! IICRC certified, 5-star rated, direct insurance billing. Call (888) 680-6768 now for immediate help.`,
+    description: `${serviceData.service} in ${serviceData.city}, ${serviceData.state_abbr} - 45-min emergency response! IICRC certified, 5-star rated, direct insurance billing. Available 24/7. Call (888) 680-6768 now!`,
     keywords: serviceData.service_keywords,
     openGraph: {
       title: serviceData.meta_title,

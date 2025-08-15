@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
     
     return {
       title: `Water Damage Restoration in ${cityName}, ${state} | Emergency Response 24/7 | Emergency Water Pros`,
-      description: `Emergency water damage restoration in ${cityName}, ${state} - 45-min response time! IICRC certified, direct insurance billing, 5-star rated. Call (888) 680-6768 for immediate help.`,
+      description: `Emergency water damage restoration in ${cityName}, ${state} - 45-min response time! IICRC certified, direct insurance billing, 5-star rated. Available 24/7. Call (888) 680-6768 now!`,
       keywords: `water damage restoration ${cityName}, emergency water damage ${cityName}, flood cleanup ${cityName}, ${cityName} water damage contractor, ${state} water damage restoration`,
       openGraph: {
         title: `Water Damage Restoration in ${cityName}, ${state} | Emergency Water Pros`,

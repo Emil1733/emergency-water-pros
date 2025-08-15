@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import PerformanceTracker from '@/components/PerformanceTracker'
 
 export const metadata: Metadata = {
   title: 'Emergency Water Pros - Water Damage Restoration Experts',
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <PerformanceTracker />
+      </body>
     </html>
   )
 }
