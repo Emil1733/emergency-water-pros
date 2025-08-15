@@ -184,16 +184,19 @@ export default function CityPage({ params }: CityPageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
-              <h3 className="text-2xl heading-secondary mb-4">Emergency Water Pros</h3>
+              <div className="mb-4">
+                <Image
+                  src="/images/logo-desktop.svg"
+                  alt="Emergency Water Pros"
+                  width={220}
+                  height={40}
+                  className="h-[40px] w-auto"
+                />
+              </div>
               <p className="text-gray-300 body-text mb-4 max-w-md">
                 Professional water damage restoration, mold remediation, and emergency response services in {cityData.city}, {cityData.state_abbr}. 
                 Your trusted local partner in property restoration.
               </p>
-              <div className="flex gap-4">
-                <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold">EW</span>
-                </div>
-              </div>
             </div>
             
             <div>

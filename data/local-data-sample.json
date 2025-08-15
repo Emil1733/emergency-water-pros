@@ -1,0 +1,84 @@
+{
+  "cities": [
+    {
+      "city": "San Diego",
+      "city_slug": "san-diego",
+      "climate_data": {
+        "flood_risk_zone": "X",
+        "average_rainfall_inches": 10.3,
+        "hurricane_risk": false,
+        "wildfire_risk": "high",
+        "humidity_levels": {
+          "summer_avg": 72,
+          "winter_avg": 58
+        },
+        "freeze_days_per_year": 0,
+        "tornado_risk": false
+      },
+      "housing_data": {
+        "median_home_age": 32,
+        "median_home_value": 849000,
+        "homes_with_basements_percent": 5,
+        "primary_construction_material": ["stucco", "wood frame"],
+        "population_density": 4200,
+        "median_household_income": 79673,
+        "flood_insurance_rate": 12
+      },
+      "risk_factors": {
+        "common_damage_causes": ["wildfire", "plumbing failures", "appliance leaks"],
+        "peak_damage_months": ["October", "November", "December"],
+        "seasonal_weather_events": ["Santa Ana winds", "winter storms"],
+        "building_code_adoption_year": 2008,
+        "soil_type": "clay",
+        "water_table_depth": "deep"
+      },
+      "business_data": {
+        "local_competitors": ["ServiceMaster", "SERVPRO", "Paul Davis"],
+        "average_response_time_minutes": 45,
+        "insurance_companies_present": ["State Farm", "Allstate", "USAA"],
+        "building_permits_per_year": 3200,
+        "recent_major_incidents": ["2022 wildfire season", "January 2023 flooding"]
+      }
+    },
+    {
+      "city": "Miami",
+      "city_slug": "miami",
+      "climate_data": {
+        "flood_risk_zone": "AE",
+        "average_rainfall_inches": 65.7,
+        "hurricane_risk": true,
+        "wildfire_risk": "low",
+        "humidity_levels": {
+          "summer_avg": 85,
+          "winter_avg": 70
+        },
+        "freeze_days_per_year": 0,
+        "tornado_risk": false
+      },
+      "housing_data": {
+        "median_home_age": 28,
+        "median_home_value": 592000,
+        "homes_with_basements_percent": 1,
+        "primary_construction_material": ["concrete block", "stucco"],
+        "population_density": 13000,
+        "median_household_income": 43401,
+        "flood_insurance_rate": 78
+      },
+      "risk_factors": {
+        "common_damage_causes": ["hurricanes", "flash flooding", "high humidity mold"],
+        "peak_damage_months": ["June", "July", "August", "September", "October"],
+        "seasonal_weather_events": ["hurricane season", "tropical storms", "king tides"],
+        "building_code_adoption_year": 1994,
+        "soil_type": "sand",
+        "water_table_depth": "shallow"
+      },
+      "business_data": {
+        "local_competitors": ["BELFOR", "Rainbow International", "ServiceMaster"],
+        "average_response_time_minutes": 35,
+        "insurance_companies_present": ["Citizens", "State Farm", "Universal"],
+        "building_permits_per_year": 1800,
+        "recent_major_incidents": ["Hurricane Ian 2022", "King tide flooding 2023"]
+      }
+    }
+  ]
+}

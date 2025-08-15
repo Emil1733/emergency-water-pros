@@ -23,9 +23,19 @@
       "WebFetch(domain:search.google.com)",
       "WebFetch(domain:www.ssllabs.com)",
       "Bash(find:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "WebFetch(domain:emergencywaterpros.com)",
+      "Bash(grep:*)",
+      "Bash(jq:*)",
+      "Bash(rm:*)",
+      "Bash(mkdir:*)",
+      "Bash(mv:*)",
+      "Bash(npx tsc:*)"
     ],
     "deny": [],
-    "defaultMode": "acceptEdits"
+    "defaultMode": "acceptEdits",
+    "additionalDirectories": [
+      "C:\\c\\Users\\tevat"
+    ]
   }
 }
