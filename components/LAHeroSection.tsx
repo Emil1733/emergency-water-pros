@@ -51,7 +51,7 @@ export default function LAHeroSection() {
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto body-text">
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto body-text">
             Premier water damage restoration services across Los Angeles County. 
             From Hollywood to Santa Monica, we restore your property to perfection.
           </p>

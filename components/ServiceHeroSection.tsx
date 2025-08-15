@@ -53,23 +53,23 @@ export default function ServiceHeroSection({ serviceData }: ServiceHeroSectionPr
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl text-white mb-6">
             <span className="block heading-primary">{serviceData.service}</span>
-            <span className="block heading-primary text-water-secondary/80 mt-2">{serviceData.city}, {serviceData.state_abbr}</span>
-            <span className="block heading-primary text-water-secondary/60 mt-2 text-3xl md:text-4xl">Professional & Fast</span>
+            <span className="block heading-primary text-white/95 mt-2">{serviceData.city}, {serviceData.state_abbr}</span>
+            <span className="block heading-primary text-white/90 mt-2 text-3xl md:text-4xl">Professional & Fast</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg md:text-xl text-water-secondary/60 max-w-3xl mx-auto body-text">
+          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto body-text">
             {serviceData.intro_paragraph}
           </p>
 
           {/* Key Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto my-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white">
-              <Clock className="w-6 h-6 mx-auto mb-2 text-water-secondary/70" />
+              <Clock className="w-6 h-6 mx-auto mb-2 text-white/80" />
               <div className="text-sm font-medium">45-Min Response</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white">
-              <Shield className="w-6 h-6 mx-auto mb-2 text-water-secondary/70" />
+              <Shield className="w-6 h-6 mx-auto mb-2 text-white/80" />
               <div className="text-sm font-medium">Licensed & Insured</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white">
@@ -77,7 +77,7 @@ export default function ServiceHeroSection({ serviceData }: ServiceHeroSectionPr
               <div className="text-sm font-medium">IICRC Certified</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white">
-              <MapPin className="w-6 h-6 mx-auto mb-2 text-water-secondary/70" />
+              <MapPin className="w-6 h-6 mx-auto mb-2 text-white/80" />
               <div className="text-sm font-medium">Local {serviceData.city} Team</div>
             </div>
           </div>
