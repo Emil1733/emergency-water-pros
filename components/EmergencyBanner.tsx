@@ -2,35 +2,26 @@
 
 import { Button } from "@/components/ui/button"
 import { Phone, Siren } from "lucide-react"
-import Image from "next/image"
 
 export default function EmergencyBanner() {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-emergency text-emergency-foreground py-3 px-4 shadow-lg">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-3">
-          {/* Mobile Logo - shows on small screens */}
-          <div className="block md:hidden">
-            <Image
-              src="/images/logo-mobile.svg"
-              alt="EWP"
-              width={80}
-              height={30}
-              className="h-[30px] w-auto"
-              priority
-            />
+          {/* Mobile Logo - CSS-based for better control */}
+          <div className="block md:hidden flex items-center">
+            <div className="flex items-center gap-1">
+              <span className="text-2xl">💧</span>
+              <span className="font-bold text-lg tracking-wider text-white">EWP</span>
+            </div>
           </div>
           
-          {/* Desktop Logo - shows on large screens */}
-          <div className="hidden md:block">
-            <Image
-              src="/images/logo-desktop.svg"
-              alt="Emergency Water Pros"
-              width={220}
-              height={40}
-              className="h-[40px] w-auto"
-              priority
-            />
+          {/* Desktop Logo - CSS-based for better control */}
+          <div className="hidden md:flex items-center">
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">💧</span>
+              <span className="font-bold text-lg tracking-wide text-white">Emergency Water Pros</span>
+            </div>
           </div>
           
           <Siren size={20} className="animate-pulse" />
