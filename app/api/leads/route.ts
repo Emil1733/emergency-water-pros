@@ -9,6 +9,12 @@ const supabase = process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.SUPABASE_SE
     )
   : null
 
+// Debug logging for environment variables
+console.log('🔍 Supabase Debug Info:')
+console.log('- SUPABASE_URL exists:', !!process.env.NEXT_PUBLIC_SUPABASE_URL)
+console.log('- SERVICE_ROLE_KEY exists:', !!process.env.SUPABASE_SERVICE_ROLE_KEY)
+console.log('- Supabase client created:', !!supabase)
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -74,11 +80,15 @@ export async function POST(request: NextRequest) {
         .select()
 
       if (error) {
-        console.error('❌ Supabase error:', error)
+        console.error('❌ Supabase error details:')
+        console.error('- Error message:', error.message)
+        console.error('- Error code:', error.code)
+        console.error('- Error details:', error.details)
+        console.error('- Full error:', error)
         
         // Fallback: Log lead data and return success to user
         console.log('📝 Fallback: Logging lead data due to Supabase error')
-        console.log('Lead data:', leadData)
+        console.log('Lead data:', JSON.stringify(leadData, null, 2))
         
         return NextResponse.json({ 
           success: true, 
