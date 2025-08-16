@@ -9,25 +9,33 @@ export interface PerformanceMetric {
   navigationType?: string
 }
 
-// Send performance data to analytics (placeholder for future implementation)
-function sendToAnalytics(metric: PerformanceMetric) {
-  // Log to console for now - replace with actual analytics endpoint
+// Send performance data to analytics
+function sendToAnalytics(metric: PerformanceMetric & { rating?: string }) {
+  // Log to console for development/debugging
   console.log('Performance Metric:', {
     metric: metric.name,
     value: Math.round(metric.value),
     delta: Math.round(metric.delta),
+    rating: metric.rating,
     id: metric.id,
     url: window.location.href,
     timestamp: new Date().toISOString()
   })
 
-  // TODO: Send to Google Analytics 4 or other analytics service
-  // gtag('event', 'web_vitals', {
-  //   metric_name: metric.name,
-  //   metric_value: Math.round(metric.value),
-  //   metric_delta: Math.round(metric.delta),
-  //   metric_id: metric.id
-  // })
+  // Send to Google Analytics 4 if available
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', 'web_vitals', {
+      metric_name: metric.name,
+      metric_value: Math.round(metric.value),
+      metric_delta: Math.round(metric.delta),
+      metric_rating: metric.rating,
+      metric_id: metric.id,
+      custom_map: {
+        metric_name: 'custom_parameter_1',
+        metric_value: 'custom_parameter_2'
+      }
+    })
+  }
 }
 
 // Web Vitals thresholds

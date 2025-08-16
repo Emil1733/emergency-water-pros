@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Phone, Siren } from "lucide-react"
 import Image from "next/image"
+import { trackPhoneClick } from "@/components/GoogleAnalytics"
 
 export default function EmergencyBanner() {
   return (
@@ -49,6 +50,7 @@ export default function EmergencyBanner() {
             href="tel:+18886806768"
             className="hover:text-emergency"
             aria-label="Call emergency hotline"
+            onClick={trackPhoneClick}
           >
             <Phone size={16} className="mr-2" />
             (888) 680-6768

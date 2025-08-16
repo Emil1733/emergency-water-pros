@@ -6,6 +6,7 @@ import Image from "next/image"
 import EmergencyBanner from "@/components/EmergencyBanner"
 import CityHeroSection from "@/components/CityHeroSection"
 import Breadcrumbs from "@/components/Breadcrumbs"
+import PageTracker from "@/components/PageTracker"
 
 // Lazy load below-the-fold components for better Core Web Vitals
 const CityServicesSection = dynamicImport(() => import("@/components/CityServicesSection"), {
@@ -168,6 +169,7 @@ export default function CityPage({ params }: CityPageProps) {
         }}
       />
 
+      <PageTracker citySlug={params.city} />
       <EmergencyBanner />
       <Breadcrumbs items={[
         { label: cityData.city, href: `/${params.city}` }

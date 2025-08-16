@@ -6,6 +6,7 @@ import Image from "next/image"
 import EmergencyBanner from "@/components/EmergencyBanner"
 import ServiceHeroSection from "@/components/ServiceHeroSection"
 import Breadcrumbs from "@/components/Breadcrumbs"
+import PageTracker from "@/components/PageTracker"
 
 // Lazy load below-the-fold components for better performance
 const ServiceProcessSection = dynamicImport(() => import("@/components/ServiceProcessSection"), {
@@ -206,6 +207,7 @@ export default function ServicePage({ params }: ServicePageProps) {
         }}
       />
 
+      <PageTracker citySlug={params.city} serviceSlug={params.service} />
       <EmergencyBanner />
       <Breadcrumbs items={[
         { label: serviceData.city, href: `/${params.city}` },

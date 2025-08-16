@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, Mail, User, MapPin, AlertCircle, CheckCircle } from "lucide-react"
 import { ServiceData } from "@/lib/csvData"
+import { trackFormSubmission } from "@/components/GoogleAnalytics"
 
 interface LeadCaptureFormProps {
   cityData: ServiceData
@@ -103,6 +104,10 @@ export default function LeadCaptureForm({ cityData, serviceType }: LeadCaptureFo
       if (response.ok) {
         setSubmitStatus('success')
         setErrors({})
+        
+        // Track successful form submission
+        trackFormSubmission('lead_capture_form', true)
+        
         // Reset form
         setFormData({
           name: '',
@@ -116,11 +121,17 @@ export default function LeadCaptureForm({ cityData, serviceType }: LeadCaptureFo
         const errorData = await response.json()
         setSubmitStatus('error')
         setErrorMessage(errorData.error || 'Submission failed. Please try again.')
+        
+        // Track failed form submission
+        trackFormSubmission('lead_capture_form', false)
       }
     } catch (error) {
       console.error('Form submission error:', error)
       setSubmitStatus('error')
       setErrorMessage('Network error. Please check your connection and try again.')
+      
+      // Track failed form submission
+      trackFormSubmission('lead_capture_form', false)
     } finally {
       setIsSubmitting(false)
     }
