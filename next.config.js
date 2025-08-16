@@ -46,6 +46,15 @@ const nextConfig = {
     // Limit parallel static generation
     workerThreads: false,
   },
+  
+  // Optimize bundle size and remove unused code
+  swcMinify: true,
+  compress: true,
+  
+  // Enable modern JavaScript output for smaller bundles
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
 }
 
 module.exports = nextConfig

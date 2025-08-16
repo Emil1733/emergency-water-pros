@@ -155,22 +155,26 @@ export default function TrustSection() {
               <div className="absolute top-4 left-4 z-10">
                 <Badge className="bg-emergency text-emergency-foreground">Before</Badge>
               </div>
-              <img
-                src="https://images.unsplash.com/photo-1446712146541-843e336d8154?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHwzfHx3YXRlciUyMGRhbWFnZSUyMGZsb29kZWQlMjByb29tJTIwZGFtYWdlZCUyMGludGVyaW9yfGVufDB8MHx8fDE3NTQ5OTk4NjN8MA&ixlib=rb-4.1.0&q=85"
+              <Image
+                src="https://images.unsplash.com/photo-1446712146541-843e336d8154?w=400&h=256&q=75&fm=webp&auto=format"
                 alt="Water damaged room before restoration by Paco S on Unsplash"
+                width={400}
+                height={256}
                 className="w-full h-64 object-cover rounded-2xl shadow-lg group-hover:shadow-2xl transition-shadow duration-300"
-                style={{ width: '100%', height: '256px' }}
+                loading="lazy"
               />
             </div>
             <div className="relative group">
               <div className="absolute top-4 left-4 z-10">
                 <Badge className="bg-chart-4 text-white">After</Badge>
               </div>
-              <img
-                src="https://images.unsplash.com/photo-1648475237029-7f853809ca14?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHw5fHxjbGVhbiUyMHJvb20lMjBtb2Rlcm4lMjBpbnRlcmlvciUyMHJlc3RvcmVkJTIwaG9tZXxlbnwwfDB8fHwxNzU0OTk5ODYzfDA&ixlib=rb-4.1.0&q=85"
+              <Image
+                src="https://images.unsplash.com/photo-1648475237029-7f853809ca14?w=400&h=256&q=75&fm=webp&auto=format"
                 alt="Clean restored room after water damage repair by Bailey Alexander on Unsplash"
+                width={400}
+                height={256}
                 className="w-full h-64 object-cover rounded-2xl shadow-lg group-hover:shadow-2xl transition-shadow duration-300"
-                style={{ width: '100%', height: '256px' }}
+                loading="lazy"
               />
             </div>
           </div>
