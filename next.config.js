@@ -34,7 +34,7 @@ const nextConfig = {
     ],
   },
   // Enable optimizations for better SEO and performance
-  trailingSlash: true,
+  // trailingSlash: true, // Disabled - was causing redirect loops for Google
   
   // Optimize for programmatic SEO with better concurrency control
   generateBuildId: async () => {
