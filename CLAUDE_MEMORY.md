@@ -5,7 +5,7 @@
 - **Domain**: https://www.emergencywaterpros.com
 - **GitHub**: https://github.com/Emil1733/emergency-water-pros.git
 - **Hosting**: Vercel with auto-deployment from GitHub
-- **Architecture**: 70+ SEO-optimized pages (10 cities × 6 services + 10 city pages)
+- **Architecture**: 131 SEO-optimized pages (20 cities × 6 services + 20 city pages + homepage + legacy page)
 - **Tailwind Version**: 3.4.1
 
 ## Current Status (Latest Session - Aug 16, 2025)
@@ -369,7 +369,9 @@ const nearbyMapping: Record<string, string[]> = {
 
 ## 🗺️ COMPLETE URL STRUCTURE & SLUGS REFERENCE (August 2025)
 
-### **VALID CITIES (10 total):**
+### **VALID CITIES (20 total):**
+
+**California Cities (10):**
 ```
 - los-angeles
 - san-diego  
@@ -381,6 +383,20 @@ const nearbyMapping: Record<string, string[]> = {
 - oakland
 - bakersfield
 - anaheim
+```
+
+**National Expansion Cities (10):**
+```
+- new-york
+- chicago
+- houston
+- phoenix
+- philadelphia
+- san-antonio
+- dallas
+- austin
+- jacksonville
+- fort-worth
 ```
 
 ### **VALID SERVICE SLUGS (6 total):**
@@ -398,25 +414,27 @@ const nearbyMapping: Record<string, string[]> = {
 **Homepage:**
 - `https://www.emergencywaterpros.com/`
 
-**City Pages (10 pages):**
+**City Pages (20 pages):**
 - `https://www.emergencywaterpros.com/los-angeles`
 - `https://www.emergencywaterpros.com/san-diego`
-- `https://www.emergencywaterpros.com/san-francisco`
-- etc. (all 10 cities)
+- `https://www.emergencywaterpros.com/new-york`
+- `https://www.emergencywaterpros.com/chicago`
+- etc. (all 20 cities - 10 CA + 10 national)
 
-**Service Pages (60 pages = 10 cities × 6 services):**
+**Service Pages (120 pages = 20 cities × 6 services):**
 - `https://www.emergencywaterpros.com/los-angeles/water-damage-restoration`
 - `https://www.emergencywaterpros.com/san-diego/mold-removal`
-- `https://www.emergencywaterpros.com/san-francisco/fire-damage-restoration`
+- `https://www.emergencywaterpros.com/new-york/fire-damage-restoration`
+- `https://www.emergencywaterpros.com/chicago/storm-damage-repair`
 - etc. (all combinations)
 
 **Legacy Route:**
 - `https://www.emergencywaterpros.com/water-restoration` (separate page)
 
-**TOTAL PAGES: 71**
+**TOTAL PAGES: 131**
 - 1 Homepage
-- 10 City pages  
-- 60 Service pages (10×6)
+- 20 City pages  
+- 120 Service pages (20×6)
 - 1 Legacy water-restoration page
 
 ### **PAGESPEED PERFORMANCE OPTIMIZATION COMPLETED ✅ (August 16, 2025)**
@@ -500,13 +518,13 @@ compiler: {
 - ✅ **City pages indexing**: Multiple city pages successfully requested for indexing
 - ✅ **Service pages indexing**: Service pages like `/san-diego/mold-removal` working
 - ✅ **All redirect errors resolved**: No more "Page cannot be indexed: Redirect error"
-- ✅ **Sitemap submitted successfully**: All 71 pages will be auto-indexed by Google
+- ✅ **Sitemap submitted successfully**: All 131 pages will be auto-indexed by Google
 - ✅ **SEO foundation complete**: Website ready for organic search traffic
 
 **MONITORING & MAINTENANCE:**
 - Monitor indexing progress in Google Search Console over next 7-14 days
 - Track organic traffic increases from improved indexing
-- All 71 pages should appear in search results within 1-2 weeks
+- All 131 pages should appear in search results within 1-2 weeks
 - No further action needed - Google will crawl automatically via sitemap
 
 ### 🚀 HIGH PRIORITY (Immediate - Next 1-2 Sessions)
@@ -711,7 +729,7 @@ compiler: {
 - ✅ **XML Structure**: Valid sitemap format
 - ✅ **Priority Settings**: Homepage (1.0), Cities (0.9), Services (0.8)
 - ✅ **Meta Tags**: Title, description, canonical properly implemented
-- **Coverage**: All 71 pages indexed (10 cities × 6 services + city pages + homepage)
+- **Coverage**: All 131 pages indexed (20 cities × 6 services + city pages + homepage)
 
 **DUPLICATE CONTENT ANALYSIS:**
 - ✅ **Unique Titles**: Each city/service has unique title tags
