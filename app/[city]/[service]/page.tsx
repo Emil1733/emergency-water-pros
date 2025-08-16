@@ -7,6 +7,7 @@ import EmergencyBanner from "@/components/EmergencyBanner"
 import ServiceHeroSection from "@/components/ServiceHeroSection"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import PageTracker from "@/components/PageTracker"
+import NearbyCitiesSection from "@/components/NearbyCitiesSection"
 
 // Lazy load below-the-fold components for better performance
 const ServiceProcessSection = dynamicImport(() => import("@/components/ServiceProcessSection"), {
@@ -211,6 +212,7 @@ export default function ServicePage({ params }: ServicePageProps) {
       <EmergencyBanner />
       <Breadcrumbs items={[
         { label: serviceData.city, href: `/${params.city}` },
+        { label: 'Services', href: `/${params.city}#services` },
         { label: serviceData.service }
       ]} />
       <div>
@@ -222,6 +224,11 @@ export default function ServicePage({ params }: ServicePageProps) {
           citySlug={params.city} 
           currentService={params.service}
           cityName={serviceData.city}
+        />
+        <NearbyCitiesSection 
+          currentCity={serviceData.city}
+          currentCitySlug={params.city}
+          serviceType={params.service}
         />
         <FAQSection cityName={serviceData.city} serviceName={serviceData.service} />
         <ContactSection cityData={serviceData} />

@@ -7,6 +7,7 @@ import EmergencyBanner from "@/components/EmergencyBanner"
 import CityHeroSection from "@/components/CityHeroSection"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import PageTracker from "@/components/PageTracker"
+import NearbyCitiesSection from "@/components/NearbyCitiesSection"
 
 // Lazy load below-the-fold components for better Core Web Vitals
 const CityServicesSection = dynamicImport(() => import("@/components/CityServicesSection"), {
@@ -177,6 +178,10 @@ export default function CityPage({ params }: CityPageProps) {
       <div>
         <CityHeroSection cityData={cityData} />
         <CityServicesSection services={cityServices} citySlug={params.city} />
+        <NearbyCitiesSection 
+          currentCity={cityData.city}
+          currentCitySlug={params.city}
+        />
         <CityTestimonialsSection cityName={cityData.city} />
         <FAQSection cityName={cityData.city} />
         <ContactSection cityData={cityData} />
