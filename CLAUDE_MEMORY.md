@@ -365,6 +365,83 @@ const nearbyMapping: Record<string, string[]> = {
 
 ## 🗺️ NEXT STEPS ROADMAP (August 2025)
 
+## 🗺️ COMPLETE URL STRUCTURE & SLUGS REFERENCE (August 2025)
+
+### **VALID CITIES (10 total):**
+```
+- los-angeles
+- san-diego  
+- san-francisco
+- san-jose
+- fresno
+- sacramento
+- long-beach
+- oakland
+- bakersfield
+- anaheim
+```
+
+### **VALID SERVICE SLUGS (6 total):**
+```
+- water-damage-restoration
+- fire-damage-restoration
+- mold-removal
+- storm-damage-repair
+- sewage-cleanup
+- basement-flood-cleanup
+```
+
+### **URL STRUCTURE EXAMPLES:**
+
+**Homepage:**
+- `https://www.emergencywaterpros.com/`
+
+**City Pages (10 pages):**
+- `https://www.emergencywaterpros.com/los-angeles`
+- `https://www.emergencywaterpros.com/san-diego`
+- `https://www.emergencywaterpros.com/san-francisco`
+- etc. (all 10 cities)
+
+**Service Pages (60 pages = 10 cities × 6 services):**
+- `https://www.emergencywaterpros.com/los-angeles/water-damage-restoration`
+- `https://www.emergencywaterpros.com/san-diego/mold-removal`
+- `https://www.emergencywaterpros.com/san-francisco/fire-damage-restoration`
+- etc. (all combinations)
+
+**Legacy Route:**
+- `https://www.emergencywaterpros.com/water-restoration` (separate page)
+
+**TOTAL PAGES: 71**
+- 1 Homepage
+- 10 City pages  
+- 60 Service pages (10×6)
+- 1 Legacy water-restoration page
+
+### **GOOGLE SEARCH CONSOLE SETUP COMPLETED ✅ (August 16, 2025)**
+**STATUS**: ✅ **INDEXING WORKING** - Redirect errors resolved, sitemap submitted successfully
+
+**ISSUES RESOLVED:**
+1. **Homepage Redirect Issue**: Removed `redirect('/water-restoration')` from homepage
+2. **Build Errors**: Fixed `'use client'` directive placement and metadata export conflicts
+3. **Vercel Redirects**: Added `vercel.json` to disable platform redirects
+4. **Sitemap Submission**: Successfully submitted `https://www.emergencywaterpros.com/sitemap.xml`
+
+**DEPLOYMENT STATUS:**
+- **Latest Commit**: `1649cd6` - Fix build error - remove use client directive to allow metadata export in homepage
+- **Production**: ✅ All redirect fixes deployed and working
+- **Google Search Console**: ✅ "Indexing requested" status achieved
+- **URL Structure**: ✅ All 71 pages properly configured and accessible
+
+**SUCCESSFUL TEST URLS:**
+- ✅ Homepage: `https://www.emergencywaterpros.com/`
+- ✅ City page: `https://www.emergencywaterpros.com/los-angeles`
+- ✅ Service page: `https://www.emergencywaterpros.com/san-diego/mold-removal`
+
+**NEXT STEPS:**
+- Monitor indexing progress in Google Search Console over next 7-14 days
+- Request indexing for additional priority pages as needed
+- Track organic traffic increases from improved indexing
+
 ### 🚀 HIGH PRIORITY (Immediate - Next 1-2 Sessions)
 **Business Impact: Revenue & Conversions**
 
