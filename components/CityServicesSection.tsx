@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, ArrowRight, Clock, Shield, Users, Zap } from "lucide-react"
 import { ServiceData } from "@/lib/csvData"
+import { scrollToContact } from "@/lib/scrollUtils"
 
 interface CityServicesSectionProps {
   services: ServiceData[]
@@ -136,6 +137,7 @@ export default function CityServicesSection({ services, citySlug }: CityServices
                 variant="outline-light" 
                 size="lg"
                 className="hover:text-water-primary px-8 py-4 rounded-full"
+                onClick={scrollToContact}
               >
                 Get Free Estimate
               </Button>

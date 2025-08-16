@@ -13,7 +13,7 @@ interface ContactSectionProps {
 
 export default function ContactSection({ cityData, serviceType }: ContactSectionProps) {
   return (
-    <section className="py-24 bg-gray-900 text-white relative overflow-hidden">
+    <section id="contact-form" className="py-24 bg-gray-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-water-primary/20 to-transparent"></div>

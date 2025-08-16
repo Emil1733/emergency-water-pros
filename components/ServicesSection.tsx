@@ -3,6 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Droplets, Flame, Zap, Home } from "lucide-react"
+import { scrollToContact } from "@/lib/scrollUtils"
 
 const services = [
   {
@@ -107,6 +108,7 @@ export default function ServicesSection() {
                 type="button"
                 className="bg-white text-black border-black hover:bg-black hover:text-white"
                 aria-label="Get free water damage assessment"
+                onClick={scrollToContact}
               >
                 Get Free Assessment
               </Button>
