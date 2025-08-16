@@ -1,6 +1,10 @@
-'use client'
-
 import { Metadata } from 'next'
+import EmergencyBanner from "@/components/EmergencyBanner"
+import HeroSection from "@/components/HeroSection"
+import ServicesSection from "@/components/ServicesSection"
+import ProcessTimeline from "@/components/ProcessTimeline"
+import TrustSection from "@/components/TrustSection"
+import ContactSection from "@/components/ContactSection"
 
 export const metadata: Metadata = {
   title: 'Emergency Water Pros | 24/7 Water Damage Restoration',
@@ -16,13 +20,6 @@ export const metadata: Metadata = {
     canonical: 'https://emergencywaterpros.com'
   }
 }
-
-import EmergencyBanner from "@/components/EmergencyBanner"
-import HeroSection from "@/components/HeroSection"
-import ServicesSection from "@/components/ServicesSection"
-import ProcessTimeline from "@/components/ProcessTimeline"
-import TrustSection from "@/components/TrustSection"
-import ContactSection from "@/components/ContactSection"
 
 export default function HomePage() {
   return (
