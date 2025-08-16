@@ -215,7 +215,7 @@ export default function LeadCaptureForm({ cityData, serviceType }: LeadCaptureFo
               value={formData.name}
               onChange={handleChange}
               placeholder="Enter your full name"
-              className={`w-full ${errors.name ? 'border-emergency' : ''}`}
+              className={`w-full transition-all duration-200 focus:ring-2 focus:ring-water-primary/50 focus:border-water-primary ${errors.name ? 'border-emergency' : ''}`}
             />
             {errors.name && <p className="text-emergency text-sm mt-1">{errors.name}</p>}
           </div>

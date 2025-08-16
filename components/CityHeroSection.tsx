@@ -4,7 +4,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Phone, Clock, Shield, MapPin } from "lucide-react"
 import { ServiceData } from "@/lib/csvData"
-import { scrollToContact } from "@/lib/scrollUtils"
+import { scrollToContactWithFocus } from "@/lib/scrollUtils"
 
 interface CityHeroSectionProps {
   cityData: ServiceData
@@ -68,7 +68,7 @@ export default function CityHeroSection({ cityData }: CityHeroSectionProps) {
               variant="outline-light" 
               size="lg"
               className="hover:text-water-primary px-8 py-6 text-lg rounded-full"
-              onClick={scrollToContact}
+              onClick={scrollToContactWithFocus}
             >
               Free {cityData.city} Assessment
             </Button>

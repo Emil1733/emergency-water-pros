@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Phone, Clock, Shield, MapPin } from "lucide-react"
-import { scrollToContact } from "@/lib/scrollUtils"
+import { scrollToContactWithFocus } from "@/lib/scrollUtils"
 
 export default function LAHeroSection() {
   return (
@@ -70,7 +70,7 @@ export default function LAHeroSection() {
               variant="outline-light" 
               size="lg"
               className="hover:text-water-primary px-8 py-6 text-lg rounded-full"
-              onClick={scrollToContact}
+              onClick={scrollToContactWithFocus}
             >
               Free LA Assessment
             </Button>
