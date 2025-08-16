@@ -160,15 +160,15 @@ export default function LeadCaptureForm({ cityData, serviceType }: LeadCaptureFo
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 bg-emergency/10 text-emergency px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Phone size={16} />
-            <span>Free Emergency Assessment</span>
+            <span>Free Emergency Assessment - 30 Min Response</span>
           </div>
           
           <h3 className="text-2xl md:text-3xl heading-secondary text-gray-900 mb-4">
-            Get Help Now in {cityData.city}
+            Get Immediate Help in {cityData.city}
           </h3>
           
           <p className="text-gray-600 body-text">
-            Fill out this form for immediate response or call <strong>(888) 680-6768</strong> for emergency service.
+            Submit this form for emergency response within 30 minutes or call <strong>(888) 680-6768</strong> for immediate service.
           </p>
         </div>
 
@@ -329,7 +329,7 @@ export default function LeadCaptureForm({ cityData, serviceType }: LeadCaptureFo
             ) : (
               <div className="flex items-center justify-center gap-2">
                 <Phone size={20} />
-                Get Free Assessment Now
+                Get Emergency Response Now
               </div>
             )}
           </Button>

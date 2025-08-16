@@ -24,11 +24,11 @@ export default function ContactSection({ cityData, serviceType }: ContactSection
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl heading-primary mb-6">
-            Get Help Now
+            Get Emergency Help Now
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto body-text">
-            Don't let water damage get worse. Contact our emergency response team immediately 
-            for fast, professional restoration services.
+            Every minute counts with water damage. Our emergency response team is standing by 24/7 
+            for immediate professional restoration services in {cityData.city}.
           </p>
         </div>
 
