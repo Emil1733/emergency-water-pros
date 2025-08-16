@@ -4,18 +4,48 @@
 
 ### **Step 1: Update City Data (Required)**
 
-**File to modify:** `data/ca_seed_services_batch1.csv`
+**File to modify:** `data/services.json`
 
-**Add new rows for each city with 6 services:**
-```csv
-city,city_slug,state,state_abbr,service,service_slug,population,lat,lon,...
-Miami,miami,Florida,FL,Water Damage Restoration,water-damage-restoration,467963,25.7617,-80.1918,...
-Miami,miami,Florida,FL,Fire Damage Restoration,fire-damage-restoration,467963,25.7617,-80.1918,...
-Miami,miami,Florida,FL,Mold Removal,mold-removal,467963,25.7617,-80.1918,...
-Miami,miami,Florida,FL,Storm Damage Repair,storm-damage-repair,467963,25.7617,-80.1918,...
-Miami,miami,Florida,FL,Sewage Cleanup,sewage-cleanup,467963,25.7617,-80.1918,...
-Miami,miami,Florida,FL,Basement Flood Cleanup,basement-flood-cleanup,467963,25.7617,-80.1918,...
+**Add new JSON objects for each city with 6 services:**
+```json
+{
+  "service": "Water Damage Restoration",
+  "service_slug": "water-damage-restoration",
+  "city": "Miami", 
+  "city_slug": "miami",
+  "state": "Florida",
+  "state_abbr": "FL",
+  "population": 467963,
+  "lat": "25.7617",
+  "lon": "-80.1918",
+  "slug": "miami-water-damage-restoration",
+  "image_url": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&h=1080&q=75&fm=webp&auto=format",
+  "meta_title": "Water Damage Restoration in Miami, FL | Emergency Water Pros",
+  "meta_description": "Emergency water damage restoration in Miami, FL - 45-min response time! IICRC certified, 5-star rated, direct insurance billing.",
+  "intro_paragraph": "When water damage strikes in Miami, every minute counts...",
+  "why_choose_us": "Our Miami water damage restoration team...",
+  "map_embed_url": "https://www.google.com/maps?q=Miami,FL&output=embed",
+  "state_fips": "12",
+  "place_fips": "45000", 
+  "place_geoid": "1245000",
+  "place_type": "City",
+  "classfp": "C1",
+  "timezone": "America/New_York",
+  "service_keywords": "water damage restoration Miami FL, flood cleanup Miami",
+  "msa_cbsa_code": "33100",
+  "county_name": "Miami-Dade County",
+  "phone_placeholder": "305-XXX-XXXX",
+  "service_area_radius_miles": 25
+}
 ```
+
+**Repeat this structure for all 6 services per city:**
+- Water Damage Restoration
+- Fire Damage Restoration  
+- Mold Removal
+- Storm Damage Repair
+- Sewage Cleanup
+- Basement Flood Cleanup
 
 ### **Step 2: Update Route Validation (Required)**
 
@@ -78,11 +108,11 @@ The sitemap is **dynamically generated** from your CSV data:
 
 ### **Large Expansion (10+ cities)**
 - **Time**: ~2 hours (data entry)
-- **Tip**: Use CSV bulk editing tools
+- **Tip**: Use JSON editor or duplicate existing city entries and modify
 - **SEO Impact**: May take 1-2 weeks for full indexing
 
 ### **National Expansion (50+ cities)**
-- **Consider**: Automated CSV generation from city databases
+- **Consider**: Automated JSON generation from city databases
 - **SEO Strategy**: Prioritize major metropolitan areas first
 - **Performance**: Consider pagination for very large datasets
 
@@ -157,7 +187,7 @@ The sitemap is **dynamically generated** from your CSV data:
 
 ## 🎯 **Success Checklist for New Cities**
 
-- [ ] CSV data added with all 6 services
+- [ ] JSON data added with all 6 services
 - [ ] VALID_CITIES arrays updated in both route files
 - [ ] Nearby cities mapping updated
 - [ ] Changes deployed to production
