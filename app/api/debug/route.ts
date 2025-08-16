@@ -10,7 +10,7 @@ export async function GET() {
     ? createClient(supabaseUrl, serviceRoleKey)
     : null
 
-  const debugInfo = {
+  const debugInfo: any = {
     timestamp: new Date().toISOString(),
     environment: process.env.NODE_ENV,
     supabase: {
