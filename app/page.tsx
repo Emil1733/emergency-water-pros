@@ -1,3 +1,5 @@
+'use client'
+
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -14,9 +16,6 @@ export const metadata: Metadata = {
     canonical: 'https://emergencywaterpros.com'
   }
 }
-
-// Proper homepage component without redirect
-'use client'
 
 import EmergencyBanner from "@/components/EmergencyBanner"
 import HeroSection from "@/components/HeroSection"
