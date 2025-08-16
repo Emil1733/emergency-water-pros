@@ -42,9 +42,14 @@ export const dynamic = 'force-dynamic'
 
 // Simple validation lists to avoid heavy CSV parsing during static generation
 const VALID_CITIES = [
+  // California cities (original 10)
   'los-angeles', 'san-diego', 'san-francisco', 'san-jose', 
   'fresno', 'sacramento', 'long-beach', 'oakland', 
-  'bakersfield', 'anaheim'
+  'bakersfield', 'anaheim',
+  // National expansion cities (10)
+  'new-york', 'chicago', 'houston', 'phoenix',
+  'philadelphia', 'san-antonio', 'dallas', 'austin',
+  'jacksonville', 'fort-worth'
 ]
 
 const VALID_SERVICES = [
