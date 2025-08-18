@@ -54,7 +54,7 @@ export default function ServiceHeroSection({ serviceData }: ServiceHeroSectionPr
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl text-white mb-6">
             <span className="block heading-primary">{serviceData.service}</span>
-            <span className="block heading-primary text-white/95 mt-2">{serviceData.city}, {serviceData.state_abbr}</span>
+            <span className="block heading-primary text-white/95 mt-2">in {serviceData.city}, {serviceData.state_abbr}</span>
             <span className="block heading-primary text-white/90 mt-2 text-3xl md:text-4xl">Professional & Fast</span>
           </h1>
 

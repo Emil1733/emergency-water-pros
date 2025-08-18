@@ -47,7 +47,7 @@ export default function LAHeroSection() {
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl text-white mb-6">
             <span className="block heading-primary">Water Damage</span>
-            <span className="block heading-primary text-white/90 mt-2">Los Angeles?</span>
+            <span className="block heading-primary text-white/90 mt-2">in Los Angeles?</span>
             <span className="block heading-primary text-white/80 mt-2">We Restore.</span>
           </h1>
 
