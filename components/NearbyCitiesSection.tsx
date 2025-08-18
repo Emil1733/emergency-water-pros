@@ -10,21 +10,42 @@ interface NearbyCitiesSectionProps {
   serviceType?: string // If on service page, show same service in nearby cities
 }
 
-// California cities served - organized by region for better recommendations
+// All cities served - organized by geographic clusters for better recommendations
 const nearbyMapping: Record<string, string[]> = {
+  // California cities - organized by region
   'los-angeles': ['san-diego', 'san-francisco', 'long-beach', 'anaheim'],
   'san-diego': ['los-angeles', 'long-beach', 'anaheim', 'san-jose'],
-  'san-francisco': ['oakland', 'san-jose', 'sacramento', 'los-angeles'],
+  'san-francisco': ['oakland', 'san-jose', 'sacramento', 'seattle'],
   'san-jose': ['san-francisco', 'oakland', 'sacramento', 'fresno'],
-  'oakland': ['san-francisco', 'san-jose', 'sacramento', 'fresno'],
+  'oakland': ['san-francisco', 'san-jose', 'sacramento', 'seattle'],
   'sacramento': ['san-francisco', 'fresno', 'oakland', 'san-jose'],
   'fresno': ['sacramento', 'bakersfield', 'san-jose', 'los-angeles'],
   'bakersfield': ['fresno', 'los-angeles', 'long-beach', 'anaheim'],
   'long-beach': ['los-angeles', 'anaheim', 'san-diego', 'bakersfield'],
-  'anaheim': ['los-angeles', 'long-beach', 'san-diego', 'bakersfield']
+  'anaheim': ['los-angeles', 'long-beach', 'san-diego', 'bakersfield'],
+  
+  // National expansion cities - grouped by region/proximity
+  'new-york': ['philadelphia', 'chicago', 'atlanta', 'miami'],
+  'chicago': ['new-york', 'philadelphia', 'denver', 'dallas'],
+  'houston': ['dallas', 'austin', 'san-antonio', 'fort-worth'],
+  'phoenix': ['denver', 'las-vegas', 'dallas', 'los-angeles'],
+  'philadelphia': ['new-york', 'chicago', 'atlanta', 'miami'],
+  'san-antonio': ['austin', 'houston', 'dallas', 'fort-worth'],
+  'dallas': ['fort-worth', 'austin', 'houston', 'san-antonio'],
+  'austin': ['dallas', 'san-antonio', 'houston', 'fort-worth'],
+  'jacksonville': ['miami', 'atlanta', 'new-york', 'philadelphia'],
+  'fort-worth': ['dallas', 'austin', 'houston', 'san-antonio'],
+  
+  // Strategic expansion cities (2025) - geographic clustering
+  'miami': ['atlanta', 'jacksonville', 'new-york', 'philadelphia'],
+  'denver': ['phoenix', 'chicago', 'seattle', 'las-vegas'],
+  'seattle': ['san-francisco', 'oakland', 'denver', 'chicago'],
+  'atlanta': ['miami', 'jacksonville', 'philadelphia', 'new-york'],
+  'las-vegas': ['phoenix', 'los-angeles', 'denver', 'anaheim']
 }
 
 const cityNames: Record<string, string> = {
+  // California cities (10)
   'los-angeles': 'Los Angeles',
   'san-diego': 'San Diego', 
   'san-francisco': 'San Francisco',
@@ -34,7 +55,26 @@ const cityNames: Record<string, string> = {
   'fresno': 'Fresno',
   'bakersfield': 'Bakersfield',
   'long-beach': 'Long Beach',
-  'anaheim': 'Anaheim'
+  'anaheim': 'Anaheim',
+  
+  // National expansion cities (10)
+  'new-york': 'New York',
+  'chicago': 'Chicago',
+  'houston': 'Houston',
+  'phoenix': 'Phoenix',
+  'philadelphia': 'Philadelphia',
+  'san-antonio': 'San Antonio',
+  'dallas': 'Dallas',
+  'austin': 'Austin',
+  'jacksonville': 'Jacksonville',
+  'fort-worth': 'Fort Worth',
+  
+  // Strategic expansion cities (5) - August 2025
+  'miami': 'Miami',
+  'denver': 'Denver',
+  'seattle': 'Seattle',
+  'atlanta': 'Atlanta',
+  'las-vegas': 'Las Vegas'
 }
 
 export default function NearbyCitiesSection({ currentCity, currentCitySlug, serviceType }: NearbyCitiesSectionProps) {
@@ -53,7 +93,7 @@ export default function NearbyCitiesSection({ currentCity, currentCitySlug, serv
 
   const sectionDescription = isServicePage
     ? `Professional ${serviceType.replace(/-/g, ' ')} services available in surrounding areas`
-    : `Emergency Water Pros serves these nearby California cities with the same professional standards`
+    : `Emergency Water Pros serves these nearby metropolitan areas with the same professional standards`
 
   return (
     <section className="py-16 bg-water-primary/5">
@@ -95,8 +135,8 @@ export default function NearbyCitiesSection({ currentCity, currentCitySlug, serv
         {/* Service Area Note */}
         <div className="text-center mt-8 p-4 bg-white rounded-lg border border-gray-200">
           <p className="text-gray-600 body-text">
-            <strong>Serving All of California:</strong> Emergency Water Pros provides rapid response 
-            emergency services throughout California with local teams in each major metropolitan area.
+            <strong>Nationwide Coverage:</strong> Emergency Water Pros provides rapid response 
+            emergency services across 25 major metropolitan areas with local teams and 24/7 availability.
           </p>
         </div>
       </div>

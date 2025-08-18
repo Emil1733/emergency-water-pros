@@ -42,7 +42,9 @@ const VALID_CITIES = [
   // National expansion cities (10)
   'new-york', 'chicago', 'houston', 'phoenix',
   'philadelphia', 'san-antonio', 'dallas', 'austin',
-  'jacksonville', 'fort-worth'
+  'jacksonville', 'fort-worth',
+  // Strategic expansion cities (5) - August 2025
+  'miami', 'denver', 'seattle', 'atlanta', 'las-vegas'
 ]
 
 export async function generateMetadata({ params }: CityPageProps): Promise<Metadata> {

@@ -30,7 +30,8 @@
       "Bash(rm:*)",
       "Bash(mkdir:*)",
       "Bash(mv:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "defaultMode": "acceptEdits",
