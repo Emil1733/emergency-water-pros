@@ -81,7 +81,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
         locale: 'en_US',
       },
       alternates: {
-        canonical: `https://emergencywaterpros.com/${params.city}`
+        canonical: `https://www.emergencywaterpros.com/${params.city}`
       }
     }
   } catch (error) {

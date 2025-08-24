@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
   },
   alternates: {
-    canonical: 'https://emergencywaterpros.com'
+    canonical: 'https://www.emergencywaterpros.com'
   }
 }
 

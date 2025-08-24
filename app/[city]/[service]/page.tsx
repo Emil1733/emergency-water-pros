@@ -106,7 +106,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
       ],
     },
     alternates: {
-      canonical: `https://emergencywaterpros.com/${params.city}/${params.service}`
+      canonical: `https://www.emergencywaterpros.com/${params.city}/${params.service}`
     }
   }
 }
