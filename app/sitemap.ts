@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { parseCSVData, getCitiesData } from '@/lib/csvData'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://emergencywaterpros.com'
+  const baseUrl = 'https://www.emergencywaterpros.com'
   
   // Get all data
   const allServices = parseCSVData()
