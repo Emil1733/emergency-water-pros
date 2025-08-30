@@ -123,7 +123,7 @@ export default function CityPage({ params }: CityPageProps) {
             "@type": "LocalBusiness",
             "name": `Emergency Water Pros ${cityData.city}`,
             "description": `Professional water damage restoration services in ${cityData.city}`,
-            "url": `https://emergencywaterpros.com/${params.city}`,
+            "url": `https://www.emergencywaterpros.com/${params.city}`,
             "telephone": "+1-888-680-6768",
             "address": {
               "@type": "PostalAddress",
@@ -139,7 +139,7 @@ export default function CityPage({ params }: CityPageProps) {
             "openingHours": "Mo-Su 00:00-23:59",
             "priceRange": "$$",
             "email": "help@emergencywaterpros.com",
-            "logo": "https://emergencywaterpros.com/logo.png",
+            "logo": "https://www.emergencywaterpros.com/logo.png",
             "image": cityData.image_url,
             "serviceArea": {
               "@type": "City",

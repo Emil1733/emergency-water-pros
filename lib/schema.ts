@@ -13,7 +13,7 @@ export function generateSchemaOrg({ type, data, citySlug, serviceSlug }: SchemaO
     "name": "Emergency Water Pros",
     "telephone": "+1-888-680-6768",
     "email": "help@emergencywaterpros.com",
-    "logo": "https://emergencywaterpros.com/logo.png",
+    "logo": "https://www.emergencywaterpros.com/logo.png",
     "openingHours": "Mo-Su 00:00-23:59",
     "sameAs": [
       "https://www.facebook.com/emergencywaterpros",
@@ -30,7 +30,7 @@ export function generateSchemaOrg({ type, data, citySlug, serviceSlug }: SchemaO
         ...baseData,
         "@type": "Organization",
         "description": "Professional 24/7 water damage restoration services across California. IICRC certified technicians, direct insurance billing, and emergency response.",
-        "url": "https://emergencywaterpros.com",
+        "url": "https://www.emergencywaterpros.com",
         "address": {
           "@type": "PostalAddress",
           "addressRegion": "California",
@@ -145,7 +145,7 @@ export function generateSchemaOrg({ type, data, citySlug, serviceSlug }: SchemaO
         "@type": "LocalBusiness",
         "name": `Emergency Water Pros ${data.city}`,
         "description": `Professional water damage restoration services in ${data.city}`,
-        "url": citySlug ? `https://emergencywaterpros.com/${citySlug}` : `https://emergencywaterpros.com`,
+        "url": citySlug ? `https://www.emergencywaterpros.com/${citySlug}` : `https://www.emergencywaterpros.com`,
         "image": data.image_url,
         "address": {
           "@type": "PostalAddress",
@@ -181,7 +181,7 @@ export function generateSchemaOrg({ type, data, citySlug, serviceSlug }: SchemaO
         "@type": "LocalBusiness",
         "name": `Emergency Water Pros ${data.city}`,
         "description": data.intro_paragraph,
-        "url": `https://emergencywaterpros.com/${citySlug}/${serviceSlug}`,
+        "url": `https://www.emergencywaterpros.com/${citySlug}/${serviceSlug}`,
         "image": data.image_url,
         "address": {
           "@type": "PostalAddress",

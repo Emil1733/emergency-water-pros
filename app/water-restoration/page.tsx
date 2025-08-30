@@ -19,8 +19,8 @@ export default function WaterRestorationPage() {
             "@type": "Organization",
             "name": "Emergency Water Pros",
             "description": "Professional 24/7 water damage restoration services across California. IICRC certified technicians, direct insurance billing, and emergency response.",
-            "url": "https://emergencywaterpros.com",
-            "logo": "https://emergencywaterpros.com/logo.png",
+            "url": "https://www.emergencywaterpros.com",
+            "logo": "https://www.emergencywaterpros.com/logo.png",
             "telephone": "+1-888-680-6768",
             "email": "help@emergencywaterpros.com",
             "address": {

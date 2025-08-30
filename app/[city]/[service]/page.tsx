@@ -129,10 +129,10 @@ export default function ServicePage({ params }: ServicePageProps) {
             "@type": "LocalBusiness",
             "name": `Emergency Water Pros ${serviceData.city}`,
             "description": serviceData.intro_paragraph,
-            "url": `https://emergencywaterpros.com/${params.city}/${params.service}`,
+            "url": `https://www.emergencywaterpros.com/${params.city}/${params.service}`,
             "telephone": "+1-888-680-6768",
             "email": "help@emergencywaterpros.com",
-            "logo": "https://emergencywaterpros.com/logo.png",
+            "logo": "https://www.emergencywaterpros.com/logo.png",
             "image": serviceData.image_url,
             "address": {
               "@type": "PostalAddress",
